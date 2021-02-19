@@ -16,6 +16,7 @@ public class MagicWorld {
      */
     public static void main(String[] args) {
         System.out.println("Wenas");
+        System.out.println("Wenas tardes :)");
     }
     
 }
