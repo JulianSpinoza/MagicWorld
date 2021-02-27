@@ -15,8 +15,9 @@ public class MagicWorld {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Interfaz i = new Interfaz();
-        i.MostrarBienvenida();
+        Voice voz = new Voice();
+        String text = "auch";
+        voz.speak(text);
     }
  
 }
