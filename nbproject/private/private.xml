@@ -3,10 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/PERSONAS/YUNE/Estudios/Distrital/MATERIAS/SEMESTRE%234/MODELOS%20DE%20PROGRAMACIÓN%20I/Proyecto%20Final/MagicWorld/src/magicworld/SwordMan.java</file>
-            <file>file:/D:/PERSONAS/YUNE/Estudios/Distrital/MATERIAS/SEMESTRE%234/MODELOS%20DE%20PROGRAMACIÓN%20I/Proyecto%20Final/MagicWorld/src/magicworld/Wizard.java</file>
-            <file>file:/D:/PERSONAS/YUNE/Estudios/Distrital/MATERIAS/SEMESTRE%234/MODELOS%20DE%20PROGRAMACIÓN%20I/Proyecto%20Final/MagicWorld/src/magicworld/Hero.java</file>
-            <file>file:/D:/PERSONAS/YUNE/Estudios/Distrital/MATERIAS/SEMESTRE%234/MODELOS%20DE%20PROGRAMACIÓN%20I/Proyecto%20Final/MagicWorld/src/magicworld/Archer.java</file>
+            <file>file:/D:/PERSONAS/YUNE/Estudios/Distrital/MATERIAS/SEMESTRE%234/MODELOS%20DE%20PROGRAMACIÓN%20I/Proyecto%20Final/MagicWorld/src/magicworld/Group.java</file>
+            <file>file:/D:/PERSONAS/YUNE/Estudios/Distrital/MATERIAS/SEMESTRE%234/MODELOS%20DE%20PROGRAMACIÓN%20I/Proyecto%20Final/MagicWorld/src/magicworld/Character.java</file>
+            <file>file:/D:/PERSONAS/YUNE/Estudios/Distrital/MATERIAS/SEMESTRE%234/MODELOS%20DE%20PROGRAMACIÓN%20I/Proyecto%20Final/MagicWorld/src/magicworld/Helmet.java</file>
+            <file>file:/D:/PERSONAS/YUNE/Estudios/Distrital/MATERIAS/SEMESTRE%234/MODELOS%20DE%20PROGRAMACIÓN%20I/Proyecto%20Final/MagicWorld/src/magicworld/Equipment.java</file>
+            <file>file:/D:/PERSONAS/YUNE/Estudios/Distrital/MATERIAS/SEMESTRE%234/MODELOS%20DE%20PROGRAMACIÓN%20I/Proyecto%20Final/MagicWorld/src/magicworld/Team.java</file>
+            <file>file:/D:/PERSONAS/YUNE/Estudios/Distrital/MATERIAS/SEMESTRE%234/MODELOS%20DE%20PROGRAMACIÓN%20I/Proyecto%20Final/MagicWorld/src/magicworld/Front.java</file>
+            <file>file:/D:/PERSONAS/YUNE/Estudios/Distrital/MATERIAS/SEMESTRE%234/MODELOS%20DE%20PROGRAMACIÓN%20I/Proyecto%20Final/MagicWorld/src/magicworld/Weapon.java</file>
         </group>
     </open-files>
 </project-private>
