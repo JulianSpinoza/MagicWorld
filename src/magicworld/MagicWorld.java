@@ -5,6 +5,9 @@
  */
 package magicworld;
 
+import java.io.File;
+import java.net.URL;
+
 /**
  *
  * @author USERS
@@ -15,9 +18,9 @@ public class MagicWorld {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Voice voz = new Voice();
-        String text = "auch";
-        voz.speak(text);
+        Voice voz = new Voice(); 
+        String dir = new File ("src/txt/Wellcome.txt").getAbsolutePath();
+        voz.speak(dir);
     }
  
 }

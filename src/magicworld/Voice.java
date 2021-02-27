@@ -1,8 +1,10 @@
 package magicworld;
 
 import com.sun.speech.freetts.VoiceManager;
+import java.io.BufferedReader;
+import java.io.FileReader;
 
-public class Voice {
+public class Voice{
     
     private String name;
     private com.sun.speech.freetts.Voice voice;
@@ -13,8 +15,25 @@ public class Voice {
         this.voice.allocate();
     }
     
-    public void speak(String text){
+    public void speak(String dir){
+        String text = LeerTXT(dir);
         this.voice.speak(text);
+    }
+    
+    private String LeerTXT(String dir){
+        String txt = "";
+        try{
+            BufferedReader bf = new BufferedReader(new FileReader(dir));
+            String temp = "";
+            String bfRead;
+            while((bfRead = bf.readLine())!= null){
+                temp = temp+bfRead;
+            }
+                txt = temp;
+        }catch(Exception e){
+            return null;
+        }
+        return txt;
     }
     
 }
