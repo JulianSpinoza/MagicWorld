@@ -1,3 +1,5 @@
+package magicworld;
+
 public class Fire implements Element{
 
     public double elementalDamage;

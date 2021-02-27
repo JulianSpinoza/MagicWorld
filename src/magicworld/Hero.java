@@ -1,3 +1,5 @@
+package magicworld;
+
 public abstract class Hero extends Character{
 
     //Attributes

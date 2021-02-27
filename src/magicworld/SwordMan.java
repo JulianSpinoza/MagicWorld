@@ -1,8 +1,12 @@
+package magicworld;
+
+import magicworld.Hero;
+
 public class SwordMan extends Hero {
   
     public SwordMan(int typeElement){
       super(typeElement);
-      this.baseDamage=206
+      this.baseDamage=206;
     }
   
     @Override

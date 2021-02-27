@@ -1,3 +1,5 @@
+package magicworld;
+
 public class Water implements Element{
     public double elementalDamage;
     public String name;

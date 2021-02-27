@@ -9,7 +9,7 @@ package magicworld;
  *
  * @author USERS
  */
-public abstract class Character {
+public abstract class Character implements Team{
     
     //Attributes
     protected float baseDamage;

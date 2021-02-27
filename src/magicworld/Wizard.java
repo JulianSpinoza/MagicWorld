@@ -1,3 +1,7 @@
+package magicworld;
+
+import magicworld.Hero;
+
 public class Wizard extends Hero {
   
     public Wizard(int typeElement){
