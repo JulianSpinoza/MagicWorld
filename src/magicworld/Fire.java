@@ -7,7 +7,7 @@ public class Fire implements Element{
     
     public Fire(){
       name= "Fuego";
-      elementalDamage = 2.3;
+      elementalDamage = 8.3;
     }
   
     @Override
