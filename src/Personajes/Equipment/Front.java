@@ -1,4 +1,6 @@
-package magicworld;
+package Personajes.Equipment;
+
+import Personajes.Equipment.Equipment;
 
 public class Front extends Equipment{
     

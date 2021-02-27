@@ -1,6 +1,6 @@
-package magicworld;
+package Personajes.TypeHero;
 
-import magicworld.Hero;
+import Personajes.TypeHero.Hero;
 
 public class Archer extends Hero {
   

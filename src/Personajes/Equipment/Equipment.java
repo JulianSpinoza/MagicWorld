@@ -1,4 +1,6 @@
-package magicworld;
+package Personajes.Equipment;
+
+import Personajes.Character;
 
 public class Equipment extends Character{
     

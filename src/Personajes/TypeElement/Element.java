@@ -1,4 +1,4 @@
-package magicworld;
+package Personajes.TypeElement;
 
 public interface Element{
 

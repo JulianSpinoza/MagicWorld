@@ -1,6 +1,7 @@
-package magicworld;
+package Personajes.TypeHero;
 
-import magicworld.Hero;
+import Personajes.TypeHero.Hero;
+import Personajes.TypeElement.Water;
 
 public class Wizard extends Hero {
   

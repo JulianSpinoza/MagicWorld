@@ -1,4 +1,6 @@
-package magicworld;
+package Personajes.TypeElement;
+
+import Personajes.TypeElement.Element;
 
 public class Water implements Element{
     public double elementalDamage;

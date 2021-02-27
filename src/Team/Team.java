@@ -1,4 +1,4 @@
-package magicworld;
+package Team;
 
 public interface Team {
     
