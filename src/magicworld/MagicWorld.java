@@ -15,7 +15,8 @@ public class MagicWorld {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("HOLA ESTO ES UNA PRUEBA DE Q SI SE PUEDE SUBIR");
+        Interfaz i = new Interfaz();
+        i.MostrarBienvenida();
     }
-    
+ 
 }
