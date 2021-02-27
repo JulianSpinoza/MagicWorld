@@ -1,12 +1,12 @@
 package Personajes.TypeHero;
 
-import Personajes.TypeHero.Hero;
+import Personajes.TypeHero.Role;
 import Personajes.TypeElement.Water;
 
-public class SwordMan extends Hero {
+public class SwordMan extends Role {
   
-    public SwordMan(int typeElement){
-      super(typeElement);
+    public SwordMan(){
+      super();
       this.baseDamage=206;
     }
   

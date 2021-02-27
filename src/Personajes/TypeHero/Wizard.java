@@ -1,12 +1,12 @@
 package Personajes.TypeHero;
 
-import Personajes.TypeHero.Hero;
+import Personajes.TypeHero.Role;
 import Personajes.TypeElement.Water;
 
-public class Wizard extends Hero {
+public class Wizard extends Role {
   
-    public Wizard(int typeElement){
-      super(typeElement);
+    public Wizard(){
+      super();
       this.baseDamage=206;
     }
   
