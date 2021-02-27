@@ -18,6 +18,9 @@ public class MagicWorld {
         Voice voz = new Voice();
         String text = "auch";
         voz.speak(text);
+        
+        
+        
     }
  
 }
