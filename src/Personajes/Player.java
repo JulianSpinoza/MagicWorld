@@ -15,7 +15,7 @@ import java.util.logging.Logger;
  *
  * @author USERS
  */
-public class Player extends Personaje implements Cloneable {
+public class Player extends Personaje{
 
     //Attributes
     private String nickname;
@@ -30,14 +30,5 @@ public class Player extends Personaje implements Cloneable {
     public void attack(Element escenario, Role enemigo, double multiplier) {
 
     }
-
-    public Player clonar() {
-        try {
-            return (Player) this.clone();
-        } catch (CloneNotSupportedException ex) {
-            Logger.getLogger(Player.class.getName()).log(Level.SEVERE, null, ex);
-            return null;
-        }
-    }
-
+    
 }

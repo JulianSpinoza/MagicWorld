@@ -6,6 +6,7 @@
 package magicworld;
 
 import Personajes.Player;
+import Personajes.TypeHero.Role;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,15 +14,15 @@ import java.util.Map;
  *
  * @author k0garashi
  */
-public class Memento {
+public class Memento implements Cloneable{
 
-    Map<Integer, Player> states = new HashMap<Integer, Player>();
+    Map<Integer, Role> states = new HashMap<Integer, Role>();
 
-    public void createState(int lvl, Player jugador) {
+    public void createState(int lvl, Role jugador) {
         states.put(lvl, jugador.clonar());
     }
 
-    public Player getState(int lvl) {
-        return states.get(lvl);
+    public Role getState(int lvl){
+        return (Role) states.get(lvl).clonar();
     }
 }

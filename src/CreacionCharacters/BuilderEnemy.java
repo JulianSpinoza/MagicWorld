@@ -25,7 +25,7 @@ public class BuilderEnemy implements BuilderCharacter {
     private Role enemy;
 
     public BuilderEnemy() {
-        this.reset();
+        //this.reset();
     }
 
     @Override
@@ -47,14 +47,14 @@ public class BuilderEnemy implements BuilderCharacter {
         }
 
         switch (typeCategory) {
-            case 1:
-                this.enemy = new Wizard(this.enemy.character, element);
-                break;
             case 2:
-                this.enemy = new Archer(this.enemy.character, element);
+                this.enemy = new Wizard(new Enemy(), element);
+                break;
+            case 1:
+                this.enemy = new Archer(new Enemy(), element);
                 break;
             case 3:
-                this.enemy = new SwordMan(this.enemy.character, element);
+                this.enemy = new SwordMan(new Enemy(), element);
                 break;
         }
     }
@@ -62,7 +62,7 @@ public class BuilderEnemy implements BuilderCharacter {
     @Override
     public Role getFinal() {
         Role finalEnemy = this.enemy;
-        reset();
+        //reset();
         return finalEnemy;
     }
 

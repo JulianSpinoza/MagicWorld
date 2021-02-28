@@ -6,7 +6,6 @@
 package CreacionCharacters;
 
 import Personajes.Player;
-import Personajes.Personaje;
 import Personajes.TypeElement.Earth;
 import Personajes.TypeElement.Element;
 import Personajes.TypeElement.Fire;
@@ -27,7 +26,7 @@ public class BuilderHero implements BuilderCharacter {
     private Role hero;
 
     public BuilderHero() {
-        this.reset();
+        //this.reset();
     }
 
     @Override
@@ -54,14 +53,14 @@ public class BuilderHero implements BuilderCharacter {
         }
 
         switch (typeCategory) {
-            case 1:
-                this.hero = new Wizard(this.hero.character, element);
-                break;
             case 2:
-                this.hero = new Archer(this.hero.character, element);
+                this.hero = new Wizard(new Player(), element);
+                break;
+            case 1:
+                this.hero = new Archer(new Player(), element);
                 break;
             case 3:
-                this.hero = new SwordMan(this.hero.character, element);
+                this.hero = new SwordMan(new Player(), element);
                 break;
         }
     }
@@ -69,7 +68,7 @@ public class BuilderHero implements BuilderCharacter {
     @Override
     public Role getFinal() {
         Role finalHero = this.hero;
-        reset();
+        //reset();
         return finalHero;
     }
 
@@ -90,6 +89,7 @@ public class BuilderHero implements BuilderCharacter {
 
     @Override
     public void setLevel(int lvl) {
+        System.out.println(this.hero.character.getLevel());
         this.hero.character.setLevel(lvl);
     }
 

@@ -31,6 +31,10 @@ public abstract class Personaje implements Team {
         this.level=lvl;
     }
     
+    public int getLevel(){
+        return this.level;
+    }
+    
     public double getHealth() {
         return this.health;
     }
@@ -38,4 +42,9 @@ public abstract class Personaje implements Team {
     public void setHealth(double newHealth) {
         this.health = newHealth;
     }
+    
+    public void restaurarVida(){
+        this.health=50*this.level;
+    }
+    
 }

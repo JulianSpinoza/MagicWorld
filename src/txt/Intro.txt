@@ -1,8 +1,8 @@
-Hey player, Wellcome to introduction. 
-I'm gonna introduce you to our mechanics. 
-First of all, you must wait your turn, avoid being dum. 
-Second, your attack will be affected in terms of your character's element and enemy's ones. 
-Finally, your attack will also be affected depending on battle's environment. 
+Hey player, Wellcome to introduction.
+I'm gonna introduce you to our mechanics.
+First of all, you must wait your turn, avoid being dum.
+Second, your attack will be affected in terms of your character's element and enemy's ones.
+Finally, your attack will also be affected depending on battle's environment.
 Take a look.
 If your character's element is fire and you are fighting in the hell, your character's attack will be multiply by 1,5.
 If your character's element is water and your enemy's element is fire, your character's attack will be multiply by 2.
