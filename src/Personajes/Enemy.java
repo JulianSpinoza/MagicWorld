@@ -20,6 +20,10 @@ public class Enemy extends Personaje{
         
     }
     
+    public float getHealth(){
+        return this.health;
+    }
+    
     @Override
     public void attack() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
