@@ -12,7 +12,8 @@ package Personajes;
 public class Enemy extends Personaje{
 
     //Methods
-    public Enemy(){
+    public Enemy(int lvl){
+        this.health = 50*lvl;
     }
     
     public void changePattern(float health){
