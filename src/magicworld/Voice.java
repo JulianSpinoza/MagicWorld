@@ -3,36 +3,34 @@ package magicworld;
 import com.sun.speech.freetts.VoiceManager;
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
-public class Voice{
-    
+public class Voice {
+
     private String name;
     private com.sun.speech.freetts.Voice voice;
-    
-    public Voice(){
+
+    public Voice() {
         this.name = "kevin16";
         this.voice = VoiceManager.getInstance().getVoice(this.name);
         this.voice.allocate();
     }
-    
-    public void speak(String text){
+
+    public void speak(String text) {
         //this.voice.setRate(200);
         this.voice.speak(text);
     }
-    
-    public String LeerTXT(String dir){
+
+    public String LeerTXT(String dir) {
         String txt = "";
-        try{
+        try {
             BufferedReader bf = new BufferedReader(new FileReader(dir));
             String temp = "";
             String bfRead;
-            while((bfRead = bf.readLine())!= null){
-                temp = temp+bfRead;
+            while ((bfRead = bf.readLine()) != null) {
+                temp = temp + bfRead;
             }
-                txt = temp;
-        }catch(Exception e){
+            txt = temp;
+        } catch (Exception e) {
             return null;
         }
         return txt;

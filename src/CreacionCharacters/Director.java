@@ -12,56 +12,56 @@ import Personajes.Personaje;
  * @author USERS
  */
 public class Director {
-    
-    public Personaje createArcher(BuilderCharacter builder, int typeElement, String nameHelmet, String nameFront, String nameWeapon){
-        
+
+    public Personaje createArcher(BuilderCharacter builder, int typeElement, String nameHelmet, String nameFront, String nameWeapon) {
+
         builder.reset();
         builder.setCategoryAndElement(1, typeElement);
-        if(nameFront != null){
+        if (nameFront != null) {
             builder.setFront(nameFront);
         }
-        if(nameHelmet != null){
+        if (nameHelmet != null) {
             builder.setFront(nameHelmet);
         }
-        if(nameWeapon != null){
+        if (nameWeapon != null) {
             builder.setFront(nameWeapon);
         }
         return builder.getFinal();
-        
+
     }
-    
-    public Personaje crearSwordMan(BuilderCharacter builder, int typeElement, String nameHelmet, String nameFront, String nameWeapon){
-        
+
+    public Personaje crearSwordMan(BuilderCharacter builder, int typeElement, String nameHelmet, String nameFront, String nameWeapon) {
+
         builder.reset();
         builder.setCategoryAndElement(2, typeElement);
-        if(nameFront != null){
+        if (nameFront != null) {
             builder.setFront(nameFront);
         }
-        if(nameHelmet != null){
+        if (nameHelmet != null) {
             builder.setFront(nameHelmet);
         }
-        if(nameWeapon != null){
+        if (nameWeapon != null) {
             builder.setFront(nameWeapon);
         }
         return builder.getFinal();
-        
+
     }
-    
-    public Personaje crearWizard(BuilderCharacter builder, int typeElement, String nameHelmet, String nameFront, String nameWeapon){
-        
+
+    public Personaje crearWizard(BuilderCharacter builder, int typeElement, String nameHelmet, String nameFront, String nameWeapon) {
+
         builder.reset();
         builder.setCategoryAndElement(1, typeElement);
-        if(nameFront != null){
+        if (nameFront != null) {
             builder.setFront(nameFront);
         }
-        if(nameHelmet != null){
+        if (nameHelmet != null) {
             builder.setFront(nameHelmet);
         }
-        if(nameWeapon != null){
+        if (nameWeapon != null) {
             builder.setFront(nameWeapon);
         }
         return builder.getFinal();
-        
+
     }
-    
+
 }

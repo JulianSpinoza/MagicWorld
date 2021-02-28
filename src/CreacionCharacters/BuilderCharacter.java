@@ -12,12 +12,17 @@ import Personajes.Personaje;
  * @author USERS
  */
 public interface BuilderCharacter {
-    
+
     public void reset();
+
     public void setCategoryAndElement(int typeCategory, int typeElement);
+
     public void setFront(String name);
+
     public void setHelmet(String name);
+
     public void setWeapon(String name);
+
     public Personaje getFinal();
-    
+
 }

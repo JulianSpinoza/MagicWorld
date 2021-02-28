@@ -14,11 +14,14 @@ import java.util.Map;
  * @author k0garashi
  */
 public class Memento {
+
     Map<Integer, Player> states = new HashMap<Integer, Player>();
-    public void createState(int lvl, Player jugador){
+
+    public void createState(int lvl, Player jugador) {
         states.put(lvl, jugador.clonar());
     }
-    public Player getState(int lvl){
+
+    public Player getState(int lvl) {
         return states.get(lvl);
     }
 }

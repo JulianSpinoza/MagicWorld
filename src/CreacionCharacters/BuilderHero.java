@@ -22,22 +22,22 @@ import magicworld.MagicWorld;
  * @author USERS
  */
 public class BuilderHero implements BuilderCharacter {
-    
+
     private Personaje hero;
 
-    public BuilderHero(){
+    public BuilderHero() {
         this.reset();
     }
-    
+
     @Override
     public void reset() {
         this.hero = new Player();
     }
 
     @Override
-    public void setCategoryAndElement(int typeCategory, int typeElement){
+    public void setCategoryAndElement(int typeCategory, int typeElement) {
         Element element = null;
-        switch(typeElement){
+        switch (typeElement) {
             case 1:
                 element = new Fire();
                 break;
@@ -51,8 +51,8 @@ public class BuilderHero implements BuilderCharacter {
                 element = new Wind();
                 break;
         }
-        
-        switch(typeCategory){
+
+        switch (typeCategory) {
             case 1:
                 this.hero = new Wizard(this.hero, element);
                 break;
@@ -64,9 +64,9 @@ public class BuilderHero implements BuilderCharacter {
                 break;
         }
     }
-    
+
     @Override
-    public Personaje getFinal(){
+    public Personaje getFinal() {
         Personaje finalHero = this.hero;
         reset();
         return finalHero;
@@ -74,17 +74,17 @@ public class BuilderHero implements BuilderCharacter {
 
     @Override
     public void setFront(String name) {
-        MagicWorld.armory.search("Front", name);
+        this.hero.equipment[0] = MagicWorld.armory.search("Front", name);
     }
 
     @Override
     public void setHelmet(String name) {
-        MagicWorld.armory.search("Helmet", name);
+        this.hero.equipment[1] = MagicWorld.armory.search("Helmet", name);
     }
 
     @Override
     public void setWeapon(String name) {
-        MagicWorld.armory.search("Weapon", name);
+        this.hero.equipment[2] = MagicWorld.armory.search("Weapon", name);
     }
-    
+
 }

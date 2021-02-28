@@ -10,9 +10,9 @@ package Personajes;
  * @author USERS
  */
 public class Amulet {
-    
+
     //Attributes
     public String description;
     private float[] stats;
-    
+
 }

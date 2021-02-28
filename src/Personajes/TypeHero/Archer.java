@@ -2,103 +2,98 @@ package Personajes.TypeHero;
 
 import Personajes.Personaje;
 import Personajes.TypeElement.Element;
-import Personajes.TypeHero.Role;
 
 public class Archer extends Role {
-    
-    public Archer(Personaje typeCharacter, Element typeElement){
-      super(typeCharacter, typeElement);
-      this.baseDamage=206;
-    }
-  
-    @Override
-    public void attack(Element escenario, Element enemigo, double multiplier) {
-        if(this.element.getName().equals(escenario.getName())){
-            this.baseDamage*=multiplier;
-        }
-        if(this.element.getName().equals("Fuego")){
-            switch(enemigo.getName()){
-                case "Fuego":
-                    this.baseDamage*=1;
-                    break;
-                case "Agua":
-                    this.baseDamage*=0.5;
-                    break;
-                case "Tierra":
-                    this.baseDamage*=0.8;
-                    break;
-                case "Viento":
-                    this.baseDamage*=2;
-                    break;
-                default:
-                    break;
-            }
-        }
-        if(this.element.getName().equals("Agua")){
-            switch(enemigo.getName()){
-                case "Fuego":
-                    this.baseDamage*=2;
-                    break;
-                case "Agua":
-                    this.baseDamage*=1;
-                    break;
-                case "Tierra":
-                    this.baseDamage*=1.3;
-                    break;
-                case "Viento":
-                    this.baseDamage*=0.7;
-                    break;
-                default:
-                    break;
-            }
-        }
-        if(this.element.getName().equals("Tierra")){
-            switch(enemigo.getName()){
-                case "Fuego":
-                    this.baseDamage*=2;
-                    break;
-                case "Agua":
-                    this.baseDamage*=0.7;
-                    break;
-                case "Tierra":
-                    this.baseDamage*=1;
-                    break;
-                case "Viento":
-                    this.baseDamage*=0;
-                    break;
-                default:
-                    break;
-            }
-        }
-        if(this.element.getName().equals("Viento")){
-            switch(enemigo.getName()){
-                case "Fuego":
-                    this.baseDamage*=0.7;
-                    break;
-                case "Agua":
-                    this.baseDamage*=1.5;
-                    break;
-                case "Tierra":
-                    this.baseDamage*=2;
-                    break;
-                case "Viento":
-                    this.baseDamage*=1;
-                    break;
-                default:
-                    break;
-            }
-        }
-      System.out.print("Cargando flecha de "+this.element+" y se redujo la vida del enemigo en "+this.baseDamage+" puntos");
+
+    public Archer(Personaje typeCharacter, Element typeElement) {
+        super(typeCharacter, typeElement);
+        this.baseDamage = 206;
     }
 
     @Override
-    public float getHealth(){
-        return this.health;
+    public void attack(Element escenario, Role enemigo, double multiplier) {
+        if (this.element.getName().equals(escenario.getName())) {
+            this.element.setElementalDamage(this.element.getElementalDamage() * multiplier);
+        }
+        if (this.element.getName().equals("Fuego")) {
+            switch (enemigo.element.getName()) {
+                case "Fuego":
+                    this.element.setElementalDamage(this.element.getElementalDamage() * 1);
+                    break;
+                case "Agua":
+                    this.element.setElementalDamage(this.element.getElementalDamage() * 0.5);
+                    break;
+                case "Tierra":
+                    this.element.setElementalDamage(this.element.getElementalDamage() * 0.8);
+                    break;
+                case "Viento":
+                    this.element.setElementalDamage(this.element.getElementalDamage() * 2);
+                    break;
+                default:
+                    break;
+            }
+        }
+        if (this.element.getName().equals("Agua")) {
+            switch (enemigo.element.getName()) {
+                case "Fuego":
+                    this.element.setElementalDamage(this.element.getElementalDamage() * 2);
+                    break;
+                case "Agua":
+                    this.element.setElementalDamage(this.element.getElementalDamage() * 1);
+                    break;
+                case "Tierra":
+                    this.element.setElementalDamage(this.element.getElementalDamage() * 1.3);
+                    break;
+                case "Viento":
+                    this.element.setElementalDamage(this.element.getElementalDamage() * 0.7);
+                    break;
+                default:
+                    break;
+            }
+        }
+        if (this.element.getName().equals("Tierra")) {
+            switch (enemigo.element.getName()) {
+                case "Fuego":
+                    this.element.setElementalDamage(this.element.getElementalDamage() * 2);
+                    break;
+                case "Agua":
+                    this.element.setElementalDamage(this.element.getElementalDamage() * 0.7);
+                    break;
+                case "Tierra":
+                    this.element.setElementalDamage(this.element.getElementalDamage() * 1);
+                    break;
+                case "Viento":
+                    this.element.setElementalDamage(this.element.getElementalDamage() * 0);
+                    break;
+                default:
+                    break;
+            }
+        }
+        if (this.element.getName().equals("Viento")) {
+            switch (enemigo.element.getName()) {
+                case "Fuego":
+                    this.element.setElementalDamage(this.element.getElementalDamage() * 0.7);
+                    break;
+                case "Agua":
+                    this.element.setElementalDamage(this.element.getElementalDamage() * 1.5);
+                    break;
+                case "Tierra":
+                    this.element.setElementalDamage(this.element.getElementalDamage() * 2);
+                    break;
+                case "Viento":
+                    this.element.setElementalDamage(this.element.getElementalDamage() * 1);
+                    break;
+                default:
+                    break;
+            }
+        }
+        System.out.print("Cargando flecha de " + this.element.getName() + " y se redujo la vida del enemigo en " + (this.baseDamage + this.element.getElementalDamage()) + " puntos");
+        enemigo.character.setHealth(enemigo.character.getHealth() - (this.baseDamage + this.element.getElementalDamage()));
     }
-  
+
     @Override
-    public Element getElement(){
+    public Element getElement() {
         return this.element;
     }
-    
-  }
+
+}

@@ -7,6 +7,7 @@ package Personajes;
 
 import Personajes.Personaje;
 import Personajes.TypeElement.Element;
+import Personajes.TypeHero.Role;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -14,27 +15,23 @@ import java.util.logging.Logger;
  *
  * @author USERS
  */
-public class Player extends Personaje implements Cloneable{
+public class Player extends Personaje implements Cloneable {
 
     //Attributes
     private String nickname;
     private Amulet[] amuleto;
-    
+
     //Methods
-    public void changeEquipment(){
-        
+    public void changeEquipment() {
+
     }
-    
+
     @Override
-    public void attack(Element escenario, Element enemigo, double multiplier) {
-        
+    public void attack(Element escenario, Role enemigo, double multiplier) {
+
     }
-    @Override
-    public float getHealth(){
-        return this.health;
-    }
-    
-    public Player clonar(){
+
+    public Player clonar() {
         try {
             return (Player) this.clone();
         } catch (CloneNotSupportedException ex) {
@@ -42,5 +39,5 @@ public class Player extends Personaje implements Cloneable{
             return null;
         }
     }
-    
+
 }

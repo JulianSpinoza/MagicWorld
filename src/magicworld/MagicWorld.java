@@ -16,9 +16,8 @@ public class MagicWorld {
     /**
      * @param args the command line arguments
      */
-    
     public static Armory armory = Armory.getInstance();
-    
+
     public static void main(String[] args) {
         Voice voz = new Voice();
         String texto = voz.LeerTXT("src/txt/Wellcome.txt");
@@ -28,5 +27,5 @@ public class MagicWorld {
         System.out.println(texto.replace(".", ".\n"));
         voz.speak(texto);
     }
- 
+
 }

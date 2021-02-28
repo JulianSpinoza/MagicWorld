@@ -12,28 +12,20 @@ import Personajes.TypeHero.Role;
  *
  * @author USERS
  */
-public class Enemy extends Personaje{
+public class Enemy extends Personaje {
 
     //Methods
-    public Enemy(int lvl){
-        this.health = 50*lvl;
+    public Enemy(int lvl) {
+        this.health = 50 * lvl;
     }
-    
-    public void changePattern(float health){
-        
+
+    public void changePattern(float health) {
+
     }
+
     @Override
-    public float getHealth(){
-        return this.health;
-    }
-    
-    @Override
-    public void attack(Element escenario, Element enemigo, double multiplier) {
+    public void attack(Element escenario, Role enemigo, double multiplier) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    public Element getElement(){
-        return this.element;
-    }
-    
+
 }

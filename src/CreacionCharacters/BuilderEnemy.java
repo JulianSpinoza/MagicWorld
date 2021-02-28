@@ -6,7 +6,6 @@
 package CreacionCharacters;
 
 import Personajes.Enemy;
-import Personajes.Equipment.Equipment;
 import Personajes.Personaje;
 import Personajes.TypeElement.Element;
 import Personajes.TypeElement.Fire;
@@ -21,22 +20,22 @@ import magicworld.MagicWorld;
  * @author USERS
  */
 public class BuilderEnemy implements BuilderCharacter {
-    
+
     private Personaje enemy;
 
-    public BuilderEnemy(){
+    public BuilderEnemy() {
         this.reset();
     }
-    
+
     @Override
     public void reset() {
         this.enemy = new Enemy(1);
     }
 
     @Override
-    public void setCategoryAndElement(int typeCategory, int typeElement){
+    public void setCategoryAndElement(int typeCategory, int typeElement) {
         Element element = null;
-        switch(typeElement){
+        switch (typeElement) {
             case 1:
                 element = new Fire();
                 break;
@@ -44,8 +43,8 @@ public class BuilderEnemy implements BuilderCharacter {
                 element = new Water();
                 break;
         }
-        
-        switch(typeCategory){
+
+        switch (typeCategory) {
             case 1:
                 this.enemy = new Wizard(this.enemy, element);
                 break;
@@ -57,14 +56,13 @@ public class BuilderEnemy implements BuilderCharacter {
                 break;
         }
     }
-    
+
     @Override
-    public Personaje getFinal(){
+    public Personaje getFinal() {
         Personaje finalEnemy = this.enemy;
         reset();
         return finalEnemy;
     }
-
 
     @Override
     public void setFront(String name) {
@@ -80,5 +78,5 @@ public class BuilderEnemy implements BuilderCharacter {
     public void setWeapon(String name) {
         this.enemy.equipment[2] = MagicWorld.armory.search("Weapon", name);
     }
-    
+
 }
