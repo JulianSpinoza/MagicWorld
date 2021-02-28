@@ -1,17 +1,23 @@
 package magicworld;
 
+import CreacionCharacters.BuilderEnemy;
+import CreacionCharacters.Director;
 import Personajes.*;
+import Personajes.TypeElement.*;
 import Team.Group;
 import java.util.Iterator;
 
 public class Combat {
-	public Combat(int combat, Player jugador) {
+	public Combat(int combat, Director director, Personaje jugador) {
+            Element elemento;
 		Group enemigos = new Group();
+                BuilderEnemy enemyBuilder = new BuilderEnemy();
                 switch(combat){
                     //Introduccion
                     case 0:
+                        elemento = new Fire();
                         enemigos.clear();
-                        enemigos.add(new Enemy(1));
+                        enemigos.add(director.crearArquero(enemyBuilder, 2, Math.random()));
                     case 1:
                         enemigos.clear();
                         enemigos.add(new Enemy(1));
@@ -88,7 +94,7 @@ public class Combat {
                 
 	}
 
-    private boolean winner(Player jugador, Group enemigos) {
+    private boolean winner(Personaje jugador, Group enemigos) {
         if (jugador.getHealth()==0){
             return true;
         }

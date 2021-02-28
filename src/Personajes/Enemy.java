@@ -5,6 +5,8 @@
  */
 package Personajes;
 
+import Personajes.TypeElement.Element;
+
 /**
  *
  * @author USERS
@@ -25,7 +27,7 @@ public class Enemy extends Personaje{
     }
     
     @Override
-    public void attack() {
+    public void attack(Element element, float multiplier) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

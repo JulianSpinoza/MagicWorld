@@ -13,7 +13,7 @@ public class SwordMan extends Role {
     }
   
     @Override
-    public void attack() {
+    public void attack(Element element, float multiplier) {
       System.out.print("Atacando con espada de "+this.element);
       this.element.reaction(new Water(),15);
     }

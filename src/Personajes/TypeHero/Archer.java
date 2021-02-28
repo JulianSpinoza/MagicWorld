@@ -12,7 +12,7 @@ public class Archer extends Role {
     }
   
     @Override
-    public void attack() {
+    public void attack(Element element, float multiplier) {
       System.out.print("Cargando flecha de "+this.element);
     }
   

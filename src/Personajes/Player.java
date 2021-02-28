@@ -6,6 +6,7 @@
 package Personajes;
 
 import Personajes.Personaje;
+import Personajes.TypeElement.Element;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -25,7 +26,8 @@ public class Player extends Personaje implements Cloneable{
     }
     
     @Override
-    public void attack() {
+    public void attack(Element element, float multiplier) {
+        
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

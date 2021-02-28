@@ -13,7 +13,7 @@ public class Wizard extends Role {
     }
   
     @Override
-    public void attack() {
+    public void attack(Element element, float multiplier) {
       System.out.print("Lanzando hechizo de "+this.element);
       this.element.reaction(new Water(),15);
     }

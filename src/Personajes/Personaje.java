@@ -5,6 +5,7 @@
  */
 package Personajes;
 
+import Personajes.TypeElement.Element;
 import Team.Team;
 
 /**
@@ -21,6 +22,6 @@ public abstract class Personaje implements Team{
     protected int level;
     
     //Methods
-    public abstract void attack();
+    public abstract void attack(Element element, float multiplier);
     
 }
