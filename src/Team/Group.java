@@ -1,14 +1,14 @@
 package Team;
 
-import Personajes.Personaje;
+import Personajes.TypeHero.Role;
 import java.util.ArrayList;
 import java.util.Iterator;
 
 public class Group implements Team {
 
-    ArrayList<Personaje> personajes = new ArrayList<Personaje>();
+    ArrayList<Role> personajes = new ArrayList<>();
 
-    public void add(Personaje character) {
+    public void add(Role character) {
         personajes.add(character);
     }
 

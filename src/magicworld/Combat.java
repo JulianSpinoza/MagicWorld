@@ -1,7 +1,6 @@
 package magicworld;
 
 import CreacionCharacters.BuilderEnemy;
-import CreacionCharacters.Director;
 import Personajes.*;
 import Personajes.TypeElement.*;
 import Team.Group;
@@ -15,11 +14,17 @@ public class Combat {
         Group enemigos = new Group();
         BuilderEnemy enemyBuilder = new BuilderEnemy();
         switch (combat) {
+            /*
+            1:Fuego
+            2:Agua
+            3:Tierra
+            4:Viento
+            */
             //Introduccion
             case 0:
                 elemento = new Fire();
                 enemigos.clear();
-                enemigos.add(main.director.crearArquero(enemyBuilder, 2, Math.random()));
+                enemigos.add(MagicWorld.director.createArcher(enemyBuilder, 1, null, "helmet1", null));
             case 1:
                 enemigos.clear();
                 enemigos.add(new Enemy(1));
