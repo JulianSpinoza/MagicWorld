@@ -27,7 +27,7 @@ public class Enemy extends Personaje{
     }
     
     @Override
-    public void attack(Element element, double multiplier) {
+    public void attack(Element escenario, Element enemigo, double multiplier) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

@@ -26,7 +26,7 @@ public class Player extends Personaje implements Cloneable{
     }
     
     @Override
-    public void attack(Element element, double multiplier) {
+    public void attack(Element escenario, Element enemigo, double multiplier) {
         
     }
     @Override

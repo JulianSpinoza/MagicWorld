@@ -23,7 +23,7 @@ public abstract class Personaje implements Team{
     protected int level;
     
     //Methods
-    public abstract void attack(Element element, double multiplier);
+    public abstract void attack(Element escenario, Element enemigo, double multiplier);
     
     public abstract float getHealth();
     

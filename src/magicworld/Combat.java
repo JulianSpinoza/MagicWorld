@@ -85,11 +85,12 @@ public class Combat {
                         enemigos.add(new Enemy(12));
                 }
                 while(!winner(jugador, enemigos)){
-                    if(jugador.getHealth()==0){
-                        
+                    Iterator<Enemy> enemy = enemigos.getCharacters();
+                    while(enemy.hasNext()){
+                        System.out.println(mostrarStats(enemy.next()));
                     }
                     jugador.attack(elemento, multiplier);
-                    Iterator<Enemy> enemy = enemigos.getCharacters();
+                    
                     while(enemy.hasNext()){
                         enemy.next().attack(elemento, multiplier);
                     }
@@ -116,5 +117,11 @@ public class Combat {
             }
         }
         return false;
+    }
+
+    private String mostrarStats(Enemy enemy) {
+        String stats = "";
+        stats+="La vida del enemigo es: "+enemy.getHealth();
+        return stats;
     }
 }
