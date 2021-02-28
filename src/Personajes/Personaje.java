@@ -5,6 +5,7 @@
  */
 package Personajes;
 
+import Personajes.Equipment.Equipment;
 import Personajes.TypeElement.Element;
 import Personajes.TypeHero.Role;
 import Team.Team;
@@ -23,6 +24,7 @@ public abstract class Personaje implements Team{
     protected int level;
     protected Personaje character;
     protected Element element;
+    public Equipment[] equipment = new Equipment [3];
     
     //Methods
     public abstract void attack(Element escenario, Element enemigo, double multiplier);

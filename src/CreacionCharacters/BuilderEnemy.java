@@ -6,6 +6,7 @@
 package CreacionCharacters;
 
 import Personajes.Enemy;
+import Personajes.Equipment.Equipment;
 import Personajes.Personaje;
 import Personajes.TypeElement.Element;
 import Personajes.TypeElement.Fire;
@@ -13,6 +14,7 @@ import Personajes.TypeElement.Water;
 import Personajes.TypeHero.Archer;
 import Personajes.TypeHero.SwordMan;
 import Personajes.TypeHero.Wizard;
+import magicworld.MagicWorld;
 
 /**
  *
@@ -56,7 +58,8 @@ public class BuilderEnemy implements BuilderCharacter {
         }
     }
     
-    public Personaje getFinalEnemy(){
+    @Override
+    public Personaje getFinal(){
         Personaje finalEnemy = this.enemy;
         reset();
         return finalEnemy;
@@ -65,14 +68,17 @@ public class BuilderEnemy implements BuilderCharacter {
 
     @Override
     public void setFront(String name) {
+        this.enemy.equipment[0] = MagicWorld.armory.search("Front", name);
     }
 
     @Override
     public void setHelmet(String name) {
+        this.enemy.equipment[1] = MagicWorld.armory.search("Helmet", name);
     }
 
     @Override
     public void setWeapon(String name) {
+        this.enemy.equipment[2] = MagicWorld.armory.search("Weapon", name);
     }
     
 }

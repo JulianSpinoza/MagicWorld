@@ -15,6 +15,7 @@ import Personajes.TypeElement.Wind;
 import Personajes.TypeHero.Archer;
 import Personajes.TypeHero.SwordMan;
 import Personajes.TypeHero.Wizard;
+import magicworld.MagicWorld;
 
 /**
  *
@@ -64,7 +65,8 @@ public class BuilderHero implements BuilderCharacter {
         }
     }
     
-    public Personaje getFinalHero(){
+    @Override
+    public Personaje getFinal(){
         Personaje finalHero = this.hero;
         reset();
         return finalHero;
@@ -72,17 +74,17 @@ public class BuilderHero implements BuilderCharacter {
 
     @Override
     public void setFront(String name) {
-        
+        MagicWorld.armory.search("Front", name);
     }
 
     @Override
     public void setHelmet(String name) {
-        
+        MagicWorld.armory.search("Helmet", name);
     }
 
     @Override
     public void setWeapon(String name) {
-        
+        MagicWorld.armory.search("Weapon", name);
     }
     
 }

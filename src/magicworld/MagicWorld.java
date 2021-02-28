@@ -5,6 +5,8 @@
  */
 package magicworld;
 
+import Personajes.Equipment.Armory;
+
 /**
  *
  * @author USERS
@@ -14,6 +16,9 @@ public class MagicWorld {
     /**
      * @param args the command line arguments
      */
+    
+    public static Armory armory = Armory.getInstance();
+    
     public static void main(String[] args) {
         Voice voz = new Voice();
         String texto = voz.LeerTXT("src/txt/Wellcome.txt");
