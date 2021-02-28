@@ -21,13 +21,13 @@ public class Enemy extends Personaje{
     public void changePattern(float health){
         
     }
-    
+    @Override
     public float getHealth(){
         return this.health;
     }
     
     @Override
-    public void attack(Element element, float multiplier) {
+    public void attack(Element element, double multiplier) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

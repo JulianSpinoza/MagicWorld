@@ -22,6 +22,8 @@ public abstract class Personaje implements Team{
     protected int level;
     
     //Methods
-    public abstract void attack(Element element, float multiplier);
+    public abstract void attack(Element element, double multiplier);
+    
+    public abstract float getHealth();
     
 }

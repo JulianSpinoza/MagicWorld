@@ -8,8 +8,9 @@ import Team.Group;
 import java.util.Iterator;
 
 public class Combat {
-	public Combat(int combat, Director director, Personaje jugador) {
-            Element elemento;
+	public Combat(int combat, Personaje jugador) {
+            Element elemento=null;
+            double multiplier=1.3;
 		Group enemigos = new Group();
                 BuilderEnemy enemyBuilder = new BuilderEnemy();
                 switch(combat){
@@ -17,7 +18,7 @@ public class Combat {
                     case 0:
                         elemento = new Fire();
                         enemigos.clear();
-                        enemigos.add(director.crearArquero(enemyBuilder, 2, Math.random()));
+                        enemigos.add(main.director.crearArquero(enemyBuilder, 2, Math.random()));
                     case 1:
                         enemigos.clear();
                         enemigos.add(new Enemy(1));
@@ -84,10 +85,13 @@ public class Combat {
                         enemigos.add(new Enemy(12));
                 }
                 while(!winner(jugador, enemigos)){
-                    jugador.attack();
+                    if(jugador.){
+                        
+                    }
+                    jugador.attack(elemento, multiplier);
                     Iterator<Enemy> enemy = enemigos.getCharacters();
                     while(enemy.hasNext()){
-                        enemy.next().attack();
+                        enemy.next().attack(elemento, multiplier);
                     }
                 }
                 System.out.println("Combate finalizado");
