@@ -16,6 +16,7 @@ public class Voice{
     }
     
     public void speak(String text){
+        this.voice.setRate(30);
         this.voice.speak(text);
     }
     
