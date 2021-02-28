@@ -7,6 +7,12 @@ package CreacionCharacters;
 
 import Personajes.Player;
 import Personajes.Personaje;
+import Personajes.TypeElement.Element;
+import Personajes.TypeElement.Fire;
+import Personajes.TypeElement.Water;
+import Personajes.TypeHero.Archer;
+import Personajes.TypeHero.SwordMan;
+import Personajes.TypeHero.Wizard;
 
 /**
  *
@@ -26,19 +32,49 @@ public class BuilderHero implements BuilderCharacter {
     }
 
     @Override
-    public void setCategory(int type) {
+    public void setCategoryAndElement(int typeCategory, int typeElement){
+        Element element = null;
+        switch(typeElement){
+            case 1:
+                element = new Fire();
+                break;
+            case 2:
+                element = new Water();
+                break;
+        }
         
-    }
-
-    @Override
-    public void setElement(int type) {
-        
+        switch(typeCategory){
+            case 1:
+                this.hero = new Wizard(this.hero, element);
+                break;
+            case 2:
+                this.hero = new Archer(this.hero, element);
+                break;
+            case 3:
+                this.hero = new SwordMan(this.hero, element);
+                break;
+        }
     }
     
     public Personaje getFinalHero(){
         Personaje finalHero = this.hero;
         reset();
         return finalHero;
+    }
+
+    @Override
+    public void setFront() {
+        
+    }
+
+    @Override
+    public void setHelmet() {
+        
+    }
+
+    @Override
+    public void setWeapon() {
+        
     }
     
 }

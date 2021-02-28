@@ -12,7 +12,9 @@ package CreacionCharacters;
 public interface BuilderCharacter {
     
     public void reset();
-    public void setCategory(int type);
-    public void setElement(int type);
+    public void setCategoryAndElement(int typeCategory, int typeElement);
+    public void setFront();
+    public void setHelmet();
+    public void setWeapon();
     
 }

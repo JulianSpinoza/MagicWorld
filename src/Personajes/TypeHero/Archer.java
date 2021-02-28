@@ -1,11 +1,13 @@
 package Personajes.TypeHero;
 
+import Personajes.Personaje;
+import Personajes.TypeElement.Element;
 import Personajes.TypeHero.Role;
 
 public class Archer extends Role {
     
-    public Archer(){
-      super();
+    public Archer(Personaje typeCharacter, Element typeElement){
+      super(typeCharacter, typeElement);
       this.baseDamage=206;
     }
   

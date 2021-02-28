@@ -2,19 +2,16 @@ package Personajes.Equipment;
 
 import Personajes.Personaje;
 
-public class Equipment extends Personaje{
+public abstract class Equipment {
     
     public float stats[];
-    public Personaje character;
+    protected Personaje character;
+    public String name;
     public String description;
     
-    public void Equip(){
-        
+    public void equip(Personaje toEquip){
+        character = toEquip;
     }
 
-    @Override
-    public void attack() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
 }

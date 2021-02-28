@@ -11,6 +11,9 @@ public abstract class Role extends Personaje{
     protected Element element;
     protected Personaje character;
   
-    
+    public Role (Personaje typeCharacter, Element typeElement){
+        character = typeCharacter;
+        element = typeElement;
+    }
   
   }

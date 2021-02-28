@@ -7,6 +7,12 @@ package CreacionCharacters;
 
 import Personajes.Enemy;
 import Personajes.Personaje;
+import Personajes.TypeElement.Element;
+import Personajes.TypeElement.Fire;
+import Personajes.TypeElement.Water;
+import Personajes.TypeHero.Archer;
+import Personajes.TypeHero.SwordMan;
+import Personajes.TypeHero.Wizard;
 
 /**
  *
@@ -26,19 +32,49 @@ public class BuilderEnemy implements BuilderCharacter {
     }
 
     @Override
-    public void setCategory(int type) {
+    public void setCategoryAndElement(int typeCategory, int typeElement){
+        Element element = null;
+        switch(typeElement){
+            case 1:
+                element = new Fire();
+                break;
+            case 2:
+                element = new Water();
+                break;
+        }
         
-    }
-
-    @Override
-    public void setElement(int type) {
-        
+        switch(typeCategory){
+            case 1:
+                this.enemy = new Wizard(this.enemy, element);
+                break;
+            case 2:
+                this.enemy = new Archer(this.enemy, element);
+                break;
+            case 3:
+                this.enemy = new SwordMan(this.enemy, element);
+                break;
+        }
     }
     
     public Personaje getFinalEnemy(){
         Personaje finalEnemy = this.enemy;
         reset();
         return finalEnemy;
+    }
+
+    @Override
+    public void setFront() {
+        
+    }
+
+    @Override
+    public void setHelmet() {
+        
+    }
+
+    @Override
+    public void setWeapon() {
+        
     }
     
 }
