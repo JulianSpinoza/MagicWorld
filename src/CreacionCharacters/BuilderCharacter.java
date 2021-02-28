@@ -13,8 +13,8 @@ public interface BuilderCharacter {
     
     public void reset();
     public void setCategoryAndElement(int typeCategory, int typeElement);
-    public void setFront();
-    public void setHelmet();
-    public void setWeapon();
+    public void setFront(String name);
+    public void setHelmet(String name);
+    public void setWeapon(String name);
     
 }

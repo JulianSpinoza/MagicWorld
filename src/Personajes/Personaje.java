@@ -6,6 +6,7 @@
 package Personajes;
 
 import Personajes.TypeElement.Element;
+import Personajes.TypeHero.Role;
 import Team.Team;
 
 /**
@@ -20,9 +21,11 @@ public abstract class Personaje implements Team{
     protected float defense;
     protected float criticalRate;
     protected int level;
+    protected Personaje character;
+    protected Element element;
     
     //Methods
-    public abstract void attack(Element element, double multiplier);
+    public abstract void attack(Element escenario, Element enemigo, double multiplier);
     
     public abstract float getHealth();
     

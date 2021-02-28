@@ -28,7 +28,7 @@ public class BuilderEnemy implements BuilderCharacter {
     
     @Override
     public void reset() {
-        this.enemy = new Enemy();
+        this.enemy = new Enemy(1);
     }
 
     @Override
@@ -62,19 +62,17 @@ public class BuilderEnemy implements BuilderCharacter {
         return finalEnemy;
     }
 
+
     @Override
-    public void setFront() {
-        
+    public void setFront(String name) {
     }
 
     @Override
-    public void setHelmet() {
-        
+    public void setHelmet(String name) {
     }
 
     @Override
-    public void setWeapon() {
-        
+    public void setWeapon(String name) {
     }
     
 }

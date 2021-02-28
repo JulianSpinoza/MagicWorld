@@ -1,15 +1,13 @@
 package Personajes.TypeElement;
 
-import Personajes.TypeElement.Element;
-
-public class Fire implements Element{
+public class Wind implements Element{
 
     public double elementalDamage;
     public String name;
     
-    public Fire(){
+    public Wind(){
       name= "Fuego";
-      elementalDamage = 8.3;
+      elementalDamage = 5.3;
     }
   
     @Override

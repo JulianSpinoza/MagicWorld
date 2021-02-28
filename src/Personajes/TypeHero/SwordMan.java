@@ -14,13 +14,21 @@ public class SwordMan extends Role {
   
     @Override
     public void attack(Element element, double multiplier) {
-      System.out.print("Atacando con espada de "+this.element);
-      this.element.reaction(new Water(),15);
+        if(this.element.getName().equals(element.getName())){
+            this.baseDamage*=multiplier;
+        }
+        System.out.print("Atacando con espada de "+this.element+" y se redujo la vida del enemigo en "+this.baseDamage+" puntos");
+        this.element.reaction(new Water(),15);
     }
 
     @Override
     public float getHealth(){
         return this.health;
+    }  
+    
+    @Override
+    public Element getElement(){
+        return this.element;
     }
-  
-  }
+    
+}

@@ -18,7 +18,7 @@ public class Voice{
     }
     
     public void speak(String text){
-        this.voice.setRate(120);
+        //this.voice.setRate(200);
         this.voice.speak(text);
     }
     
@@ -37,14 +37,5 @@ public class Voice{
         }
         return txt;
     }
-    
-    public void MostrarEjemploStacts(){
-        String E1="If your character's element is fire and you are fighting in the hell, your character's attack will be multiply by 1,5";
-        System.out.println(E1);
-        speak(E1);
-        String E2 ="If your character's element is water and your enemy's element is fire, your character's attack will be multiply by 2";
-        System.out.println(E2);
-        speak(E2);
-    }
-    
+
 }
