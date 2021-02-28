@@ -21,4 +21,9 @@ public class Archer extends Role {
         return this.health;
     }
   
+    @Override
+    public Element getElement(){
+        return this.element;
+    }
+    
   }

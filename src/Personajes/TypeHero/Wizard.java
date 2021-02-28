@@ -23,4 +23,9 @@ public class Wizard extends Role {
         return this.health;
     }
   
+    @Override
+    public Element getElement(){
+        return this.element;
+    }
+    
   }

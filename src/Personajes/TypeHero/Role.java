@@ -15,5 +15,7 @@ public abstract class Role extends Personaje{
         character = typeCharacter;
         element = typeElement;
     }
-  
+    
+    public abstract Element getElement();
+    
   }

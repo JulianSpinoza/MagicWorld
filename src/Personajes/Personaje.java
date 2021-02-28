@@ -6,6 +6,7 @@
 package Personajes;
 
 import Personajes.TypeElement.Element;
+import Personajes.TypeHero.Role;
 import Team.Team;
 
 /**

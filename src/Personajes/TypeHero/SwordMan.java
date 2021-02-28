@@ -21,6 +21,11 @@ public class SwordMan extends Role {
     @Override
     public float getHealth(){
         return this.health;
+    }  
+    
+    @Override
+    public Element getElement(){
+        return this.element;
     }
-  
-  }
+    
+}
