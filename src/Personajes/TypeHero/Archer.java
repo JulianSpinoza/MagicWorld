@@ -13,7 +13,10 @@ public class Archer extends Role {
   
     @Override
     public void attack(Element element, double multiplier) {
-      System.out.print("Cargando flecha de "+this.element);
+        if(this.element.getName().equals(element.getName())){
+            this.baseDamage*=multiplier;
+        }
+      System.out.print("Cargando flecha de "+this.element+" y se redujo la vida del enemigo en "+this.baseDamage+" puntos");
     }
 
     @Override

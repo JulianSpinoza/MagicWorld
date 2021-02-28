@@ -28,7 +28,7 @@ public class BuilderEnemy implements BuilderCharacter {
     
     @Override
     public void reset() {
-        this.enemy = new Enemy();
+        this.enemy = new Enemy(1);
     }
 
     @Override

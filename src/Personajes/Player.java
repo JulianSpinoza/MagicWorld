@@ -28,7 +28,6 @@ public class Player extends Personaje implements Cloneable{
     @Override
     public void attack(Element element, double multiplier) {
         
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     @Override
     public float getHealth(){

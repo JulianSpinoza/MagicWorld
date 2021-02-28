@@ -85,7 +85,7 @@ public class Combat {
                         enemigos.add(new Enemy(12));
                 }
                 while(!winner(jugador, enemigos)){
-                    if(jugador){
+                    if(jugador.getHealth()==0){
                         
                     }
                     jugador.attack(elemento, multiplier);

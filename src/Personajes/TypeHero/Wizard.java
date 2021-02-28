@@ -14,8 +14,11 @@ public class Wizard extends Role {
   
     @Override
     public void attack(Element element, double multiplier) {
-      System.out.print("Lanzando hechizo de "+this.element);
-      this.element.reaction(new Water(),15);
+        if(this.element.getName().equals(element.getName())){
+            this.baseDamage*=multiplier;
+        }
+        System.out.print("Lanzando hechizo de "+this.element+" y se redujo la vida del enemigo en "+this.baseDamage+" puntos");
+        this.element.reaction(new Water(),15);
     }
 
     @Override

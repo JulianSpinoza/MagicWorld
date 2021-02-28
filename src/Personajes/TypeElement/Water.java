@@ -13,4 +13,9 @@ public class Water implements Element{
     public void reaction(Element element, float percentage){
       this.elementalDamage+=this.elementalDamage*percentage;
     }
+    
+    @Override
+    public String getName() {
+        return this.name;
+    }
   }

@@ -23,5 +23,10 @@ public class Earth implements Element{
     public void reaction(Element element, float percentage){
       System.out.print("Se vaporizo e hizo un daño "+this.elementalDamage*percentage);
     }
+
+    @Override
+    public String getName() {
+        return this.name;
+    }
 }
 
