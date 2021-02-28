@@ -13,9 +13,20 @@ import java.util.ArrayList;
  */
 public class Armory {
     
+    private static Armory instance;
     public ArrayList<Front> front = new ArrayList<Front>();
     public ArrayList<Helmet> helmet = new ArrayList<Helmet>();
     public ArrayList<Weapon> weapon = new ArrayList<Weapon>();
+    
+    private Armory(){
+    }
+    
+    public static Armory getInstance(){
+        if(instance == null){
+            instance = new Armory();
+        }
+        return instance;
+    }
     
     public void addFront(String name, String description, float weight, float defenseMultiplier){
         front.add(new Front(name,description,weight,defenseMultiplier));
