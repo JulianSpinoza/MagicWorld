@@ -5,6 +5,7 @@
  */
 package magicworld;
 
+import Personajes.Player;
 import java.io.File;
 import java.net.URL;
 
@@ -22,6 +23,10 @@ public class MagicWorld {
         String dir = new File ("src/txt/Wellcome.txt").getAbsolutePath();
         System.out.println(voz.LeerTXT(dir));
         voz.speak(voz.LeerTXT(dir));
+        Player jugador = new Player();
+        Memento states = new Memento();
+        states.createState(1, jugador);
+        new Combat(1, jugador);
     }
  
 }

@@ -6,12 +6,14 @@
 package Personajes;
 
 import Personajes.Personaje;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author USERS
  */
-public class Player extends Personaje{
+public class Player extends Personaje implements Cloneable{
 
     //Attributes
     private String nickname;
@@ -29,6 +31,15 @@ public class Player extends Personaje{
     
     public float getHealth(){
         return this.health;
+    }
+    
+    public Player clonar(){
+        try {
+            return (Player) this.clone();
+        } catch (CloneNotSupportedException ex) {
+            Logger.getLogger(Player.class.getName()).log(Level.SEVERE, null, ex);
+            return null;
+        }
     }
     
 }
