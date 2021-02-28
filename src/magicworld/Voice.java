@@ -3,6 +3,8 @@ package magicworld;
 import com.sun.speech.freetts.VoiceManager;
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Voice{
     
@@ -15,8 +17,8 @@ public class Voice{
         this.voice.allocate();
     }
     
-    public void speak(String text){
-        this.voice.setRate(30);
+    public void speak(String text) throws InterruptedException{
+        this.voice.setRate(120);
         this.voice.speak(text);
     }
     
