@@ -89,7 +89,7 @@ public class Combat {
                     while(enemy.hasNext()){
                         System.out.println(mostrarStats(enemy.next()));
                     }
-                    jugador.attack(elemento, multiplier);
+                    jugador.attack(elemento, enemy.next().getElement(), multiplier);
                     
                     while(enemy.hasNext()){
                         enemy.next().attack(elemento, multiplier);
@@ -121,7 +121,7 @@ public class Combat {
 
     private String mostrarStats(Enemy enemy) {
         String stats = "";
-        stats+="La vida del enemigo es: "+enemy.getHealth();
+        stats+="La vida del enemigo es: "+enemy.getHealth()+" y su elemeneto es: "+enemy.getElement().getName();
         return stats;
     }
 }

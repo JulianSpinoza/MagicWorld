@@ -13,7 +13,7 @@ public class Wizard extends Role {
     }
   
     @Override
-    public void attack(Element element, double multiplier) {
+    public void attack(Element element, Element enemigo,double multiplier) {
         if(this.element.getName().equals(element.getName())){
             this.baseDamage*=multiplier;
         }

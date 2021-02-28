@@ -22,7 +22,6 @@ public class MagicWorld {
         texto = voz.LeerTXT("src/txt/Intro.txt");
         System.out.println(texto.replace(".", ".\n"));
         voz.speak(texto);
-        voz.MostrarEjemploStacts();
     }
  
 }
