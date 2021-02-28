@@ -6,6 +6,7 @@
 package CreacionCharacters;
 
 import Personajes.Personaje;
+import Personajes.TypeHero.Role;
 
 /**
  *
@@ -13,7 +14,7 @@ import Personajes.Personaje;
  */
 public class Director {
 
-    public Personaje createArcher(BuilderCharacter builder, int typeElement, String nameHelmet, String nameFront, String nameWeapon) {
+    public Role createArcher(int lvl, BuilderCharacter builder, int typeElement, String nameHelmet, String nameFront, String nameWeapon) {
 
         builder.reset();
         builder.setCategoryAndElement(1, typeElement);
@@ -26,11 +27,12 @@ public class Director {
         if (nameWeapon != null) {
             builder.setFront(nameWeapon);
         }
+        builder.setLevel(lvl);
         return builder.getFinal();
 
     }
 
-    public Personaje crearSwordMan(BuilderCharacter builder, int typeElement, String nameHelmet, String nameFront, String nameWeapon) {
+    public Role crearSwordMan(BuilderCharacter builder, int typeElement, String nameHelmet, String nameFront, String nameWeapon) {
 
         builder.reset();
         builder.setCategoryAndElement(2, typeElement);
@@ -47,7 +49,7 @@ public class Director {
 
     }
 
-    public Personaje crearWizard(BuilderCharacter builder, int typeElement, String nameHelmet, String nameFront, String nameWeapon) {
+    public Role crearWizard(BuilderCharacter builder, int typeElement, String nameHelmet, String nameFront, String nameWeapon) {
 
         builder.reset();
         builder.setCategoryAndElement(1, typeElement);

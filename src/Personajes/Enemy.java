@@ -15,8 +15,8 @@ import Personajes.TypeHero.Role;
 public class Enemy extends Personaje {
 
     //Methods
-    public Enemy(int lvl) {
-        this.health = 50 * lvl;
+    public Enemy() {
+        this.health = 50 * this.level;
     }
 
     public void changePattern(float health) {

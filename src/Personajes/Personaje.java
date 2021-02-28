@@ -26,7 +26,11 @@ public abstract class Personaje implements Team {
 
     //Methods
     public abstract void attack(Element escenario, Role enemigo, double multiplier);
-
+    
+    public void setLevel(int lvl){
+        this.level=lvl;
+    }
+    
     public double getHealth() {
         return this.health;
     }

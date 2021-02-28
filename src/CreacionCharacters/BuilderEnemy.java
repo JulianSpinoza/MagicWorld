@@ -11,6 +11,7 @@ import Personajes.TypeElement.Element;
 import Personajes.TypeElement.Fire;
 import Personajes.TypeElement.Water;
 import Personajes.TypeHero.Archer;
+import Personajes.TypeHero.Role;
 import Personajes.TypeHero.SwordMan;
 import Personajes.TypeHero.Wizard;
 import magicworld.MagicWorld;
@@ -21,7 +22,7 @@ import magicworld.MagicWorld;
  */
 public class BuilderEnemy implements BuilderCharacter {
 
-    private Personaje enemy;
+    private Role enemy;
 
     public BuilderEnemy() {
         this.reset();
@@ -29,7 +30,8 @@ public class BuilderEnemy implements BuilderCharacter {
 
     @Override
     public void reset() {
-        this.enemy = new Enemy(1);
+        this.enemy.character = new Enemy();
+        this.enemy.element=null;
     }
 
     @Override
@@ -46,37 +48,42 @@ public class BuilderEnemy implements BuilderCharacter {
 
         switch (typeCategory) {
             case 1:
-                this.enemy = new Wizard(this.enemy, element);
+                this.enemy = new Wizard(this.enemy.character, element);
                 break;
             case 2:
-                this.enemy = new Archer(this.enemy, element);
+                this.enemy = new Archer(this.enemy.character, element);
                 break;
             case 3:
-                this.enemy = new SwordMan(this.enemy, element);
+                this.enemy = new SwordMan(this.enemy.character, element);
                 break;
         }
     }
 
     @Override
-    public Personaje getFinal() {
-        Personaje finalEnemy = this.enemy;
+    public Role getFinal() {
+        Role finalEnemy = this.enemy;
         reset();
         return finalEnemy;
     }
 
     @Override
     public void setFront(String name) {
-        this.enemy.equipment[0] = MagicWorld.armory.search("Front", name);
+        this.enemy.character.equipment[0] = MagicWorld.armory.search("Front", name);
     }
 
     @Override
     public void setHelmet(String name) {
-        this.enemy.equipment[1] = MagicWorld.armory.search("Helmet", name);
+        this.enemy.character.equipment[1] = MagicWorld.armory.search("Helmet", name);
     }
 
     @Override
     public void setWeapon(String name) {
-        this.enemy.equipment[2] = MagicWorld.armory.search("Weapon", name);
+        this.enemy.character.equipment[2] = MagicWorld.armory.search("Weapon", name);
+    }
+
+    @Override
+    public void setLevel(int lvl) {
+        this.enemy.character.setLevel(lvl);
     }
 
 }

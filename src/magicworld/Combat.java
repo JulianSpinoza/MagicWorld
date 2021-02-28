@@ -3,12 +3,14 @@ package magicworld;
 import CreacionCharacters.BuilderEnemy;
 import Personajes.*;
 import Personajes.TypeElement.*;
+import Personajes.TypeHero.Role;
 import Team.Group;
 import java.util.Iterator;
 
 public class Combat {
 
-    public Combat(int combat, Personaje jugador) {
+    public Combat(int combat, Role jugador) {
+        String texto;
         Element elemento = null;
         double multiplier = 1.3;
         Group enemigos = new Group();
@@ -19,86 +21,122 @@ public class Combat {
             2:Agua
             3:Tierra
             4:Viento
-            */
+             */
             //Introduccion
             case 0:
+                texto = MagicWorld.voz.LeerTXT("src/txt/combat_0.txt");
+                System.out.println(texto.replace(".", ".\n"));
+                MagicWorld.voz.speak(texto);
                 elemento = new Fire();
                 enemigos.clear();
-                enemigos.add(MagicWorld.director.createArcher(enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(1, enemyBuilder, 1, null, "helmet1", null));
             case 1:
+                texto = MagicWorld.voz.LeerTXT("src/txt/combat_1.txt");
+                System.out.println(texto.replace(".", ".\n"));
+                MagicWorld.voz.speak(texto);
                 enemigos.clear();
-                enemigos.add(new Enemy(1));
-                enemigos.add(new Enemy(1));
+                enemigos.add(MagicWorld.director.createArcher(1, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(1, enemyBuilder, 1, null, "helmet1", null));
             case 2:
+                texto = MagicWorld.voz.LeerTXT("src/txt/combat_2.txt");
+                System.out.println(texto.replace(".", ".\n"));
+                MagicWorld.voz.speak(texto);
                 enemigos.clear();
-                enemigos.add(new Enemy(2));
-                enemigos.add(new Enemy(1));
+                enemigos.add(MagicWorld.director.createArcher(2, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(1, enemyBuilder, 1, null, "helmet1", null));
             case 3:
+                texto = MagicWorld.voz.LeerTXT("src/txt/combat_3.txt");
+                System.out.println(texto.replace(".", ".\n"));
+                MagicWorld.voz.speak(texto);
                 enemigos.clear();
-                enemigos.add(new Enemy(3));
-                enemigos.add(new Enemy(2));
-                enemigos.add(new Enemy(2));
+                enemigos.add(MagicWorld.director.createArcher(3, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(2, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(2, enemyBuilder, 1, null, "helmet1", null));
             case 4:
+                texto = MagicWorld.voz.LeerTXT("src/txt/combat_4.txt");
+                System.out.println(texto.replace(".", ".\n"));
+                MagicWorld.voz.speak(texto);
                 enemigos.clear();
-                enemigos.add(new Enemy(4));
-                enemigos.add(new Enemy(4));
-                enemigos.add(new Enemy(3));
+                enemigos.add(MagicWorld.director.createArcher(4, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(4, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(3, enemyBuilder, 1, null, "helmet1", null));
             case 5:
+                texto = MagicWorld.voz.LeerTXT("src/txt/combat_5.txt");
+                System.out.println(texto.replace(".", ".\n"));
+                MagicWorld.voz.speak(texto);
                 enemigos.clear();
-                enemigos.add(new Enemy(5));
-                enemigos.add(new Enemy(4));
-                enemigos.add(new Enemy(4));
-                enemigos.add(new Enemy(4));
+                enemigos.add(MagicWorld.director.createArcher(5, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(4, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(4, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(4, enemyBuilder, 1, null, "helmet1", null));
             case 6:
+                texto = MagicWorld.voz.LeerTXT("src/txt/combat_6.txt");
+                System.out.println(texto.replace(".", ".\n"));
+                MagicWorld.voz.speak(texto);
                 enemigos.clear();
-                enemigos.add(new Enemy(6));
-                enemigos.add(new Enemy(6));
-                enemigos.add(new Enemy(5));
-                enemigos.add(new Enemy(5));
+                enemigos.add(MagicWorld.director.createArcher(6, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(6, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(5, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(5, enemyBuilder, 1, null, "helmet1", null));
             case 7:
+                texto = MagicWorld.voz.LeerTXT("src/txt/combat_7.txt");
+                System.out.println(texto.replace(".", ".\n"));
+                MagicWorld.voz.speak(texto);
                 enemigos.clear();
-                enemigos.add(new Enemy(7));
-                enemigos.add(new Enemy(7));
-                enemigos.add(new Enemy(6));
-                enemigos.add(new Enemy(6));
-                enemigos.add(new Enemy(6));
+                enemigos.add(MagicWorld.director.createArcher(7, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(7, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(6, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(6, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(6, enemyBuilder, 1, null, "helmet1", null));
             case 8:
+                texto = MagicWorld.voz.LeerTXT("src/txt/combat_8.txt");
+                System.out.println(texto.replace(".", ".\n"));
+                MagicWorld.voz.speak(texto);
                 enemigos.clear();
-                enemigos.add(new Enemy(8));
-                enemigos.add(new Enemy(8));
-                enemigos.add(new Enemy(8));
-                enemigos.add(new Enemy(8));
+                enemigos.add(MagicWorld.director.createArcher(8, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(8, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(8, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(8, enemyBuilder, 1, null, "helmet1", null));
             case 9:
+                texto = MagicWorld.voz.LeerTXT("src/txt/combat_9.txt");
+                System.out.println(texto.replace(".", ".\n"));
+                MagicWorld.voz.speak(texto);
                 enemigos.clear();
-                enemigos.add(new Enemy(9));
-                enemigos.add(new Enemy(9));
-                enemigos.add(new Enemy(9));
-                enemigos.add(new Enemy(9));
+                enemigos.add(MagicWorld.director.createArcher(9, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(9, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(9, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(9, enemyBuilder, 1, null, "helmet1", null));
             case 10:
+                texto = MagicWorld.voz.LeerTXT("src/txt/combat_10.txt");
+                System.out.println(texto.replace(".", ".\n"));
+                MagicWorld.voz.speak(texto);
                 enemigos.clear();
-                enemigos.add(new Enemy(10));
-                enemigos.add(new Enemy(10));
-                enemigos.add(new Enemy(10));
-                enemigos.add(new Enemy(9));
-                enemigos.add(new Enemy(9));
+                enemigos.add(MagicWorld.director.createArcher(10, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(10, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(10, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(9, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(9, enemyBuilder, 1, null, "helmet1", null));
             //FINAL BOSS
             case 11:
+                texto = MagicWorld.voz.LeerTXT("src/txt/combat_11.txt");
+                System.out.println(texto.replace(".", ".\n"));
+                MagicWorld.voz.speak(texto);
                 enemigos.clear();
-                enemigos.add(new Enemy(10));
-                enemigos.add(new Enemy(10));
-                enemigos.add(new Enemy(10));
-                enemigos.add(new Enemy(10));
-                enemigos.add(new Enemy(12));
+                enemigos.add(MagicWorld.director.createArcher(10, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(10, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(10, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(10, enemyBuilder, 1, null, "helmet1", null));
+                enemigos.add(MagicWorld.director.createArcher(12, enemyBuilder, 1, null, "helmet1", null));
         }
         while (!winner(jugador, enemigos)) {
-            Iterator<Enemy> enemy = enemigos.getCharacters();
+            Iterator<Role> enemy = enemigos.getCharacters();
             while (enemy.hasNext()) {
                 System.out.println(mostrarStats(enemy.next()));
             }
-            jugador.attack(elemento, enemy.next().getElement(), multiplier);
+            jugador.attack(elemento, enemy.next(), multiplier);
 
             while (enemy.hasNext()) {
-                enemy.next().attack(elemento, multiplier);
+                enemy.next().attack(elemento, jugador, multiplier);
             }
         }
         System.out.println("Combate finalizado");
@@ -124,9 +162,9 @@ public class Combat {
         return false;
     }
 
-    private String mostrarStats(Enemy enemy) {
+    private String mostrarStats(Role enemy) {
         String stats = "";
-        stats += "La vida del enemigo es: " + enemy.getHealth() + " y su elemeneto es: " + enemy.getElement().getName();
+        stats += "La vida del enemigo es: " + enemy.character.getHealth() + " y su elemeneto es: " + enemy.element.getName();
         return stats;
     }
 }

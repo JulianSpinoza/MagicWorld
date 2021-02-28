@@ -5,7 +5,7 @@
  */
 package CreacionCharacters;
 
-import Personajes.Personaje;
+import Personajes.TypeHero.Role;
 
 /**
  *
@@ -14,6 +14,8 @@ import Personajes.Personaje;
 public interface BuilderCharacter {
 
     public void reset();
+    
+    public void setLevel(int lvl);
 
     public void setCategoryAndElement(int typeCategory, int typeElement);
 
@@ -23,6 +25,6 @@ public interface BuilderCharacter {
 
     public void setWeapon(String name);
 
-    public Personaje getFinal();
+    public Role getFinal();
 
 }
