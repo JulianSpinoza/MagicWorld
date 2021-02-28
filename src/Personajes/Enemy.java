@@ -5,13 +5,11 @@
  */
 package Personajes;
 
-import Personajes.Character;
-
 /**
  *
  * @author USERS
  */
-public class Enemy extends Character{
+public class Enemy extends Personaje{
 
     //Methods
     public Enemy(){

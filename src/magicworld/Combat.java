@@ -1,12 +1,12 @@
 package magicworld;
 
-import Personajes.Enemy;
+import Personajes.*;
 import Team.Group;
-import Team.Team;
 
 public class Combat {
 	public Combat(int combat) {
 		Group enemigos = new Group();
-                enemigos.add(new Enemy());
+                Personaje enemy = new Enemy();
+                enemigos.add(enemy);
 	}
 }

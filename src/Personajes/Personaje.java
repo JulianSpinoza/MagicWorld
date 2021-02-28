@@ -11,7 +11,7 @@ import Team.Team;
  *
  * @author USERS
  */
-public abstract class Character implements Team{
+public abstract class Personaje implements Team{
     
     //Attributes
     protected float baseDamage;

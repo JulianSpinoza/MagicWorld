@@ -1,11 +1,11 @@
 package Personajes.Equipment;
 
-import Personajes.Character;
+import Personajes.Personaje;
 
-public class Equipment extends Character{
+public class Equipment extends Personaje{
     
     public float stats[];
-    public Character character;
+    public Personaje character;
     public String description;
     
     public void Equip(){

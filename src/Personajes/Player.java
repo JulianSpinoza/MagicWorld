@@ -5,13 +5,13 @@
  */
 package Personajes;
 
-import Personajes.Character;
+import Personajes.Personaje;
 
 /**
  *
  * @author USERS
  */
-public class Player extends Character{
+public class Player extends Personaje{
 
     //Attributes
     private String nickname;

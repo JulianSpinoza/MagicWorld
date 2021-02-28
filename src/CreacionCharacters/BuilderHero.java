@@ -6,7 +6,7 @@
 package CreacionCharacters;
 
 import Personajes.Player;
-import Personajes.Character;
+import Personajes.Personaje;
 
 /**
  *
@@ -14,7 +14,7 @@ import Personajes.Character;
  */
 public class BuilderHero implements BuilderCharacter {
     
-    private Character hero;
+    private Personaje hero;
 
     public BuilderHero(){
         this.reset();
@@ -35,8 +35,8 @@ public class BuilderHero implements BuilderCharacter {
         
     }
     
-    public Character getFinalHero(){
-        Character finalHero = this.hero;
+    public Personaje getFinalHero(){
+        Personaje finalHero = this.hero;
         reset();
         return finalHero;
     }

@@ -6,7 +6,7 @@
 package CreacionCharacters;
 
 import Personajes.Enemy;
-import Personajes.Character;
+import Personajes.Personaje;
 
 /**
  *
@@ -14,7 +14,7 @@ import Personajes.Character;
  */
 public class BuilderEnemy implements BuilderCharacter {
     
-    private Character enemy;
+    private Personaje enemy;
 
     public BuilderEnemy(){
         this.reset();
@@ -35,8 +35,8 @@ public class BuilderEnemy implements BuilderCharacter {
         
     }
     
-    public Character getFinalEnemy(){
-        Character finalEnemy = this.enemy;
+    public Personaje getFinalEnemy(){
+        Personaje finalEnemy = this.enemy;
         reset();
         return finalEnemy;
     }
