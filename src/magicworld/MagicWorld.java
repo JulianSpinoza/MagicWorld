@@ -20,7 +20,7 @@ public class MagicWorld {
     public static void main(String[] args) {
         Voice voz = new Voice(); 
         String dir = new File ("src/txt/Wellcome.txt").getAbsolutePath();
-        voz.speak(dir);
+        voz.speak(voz.LeerTXT(dir));
     }
  
 }

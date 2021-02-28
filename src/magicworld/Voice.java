@@ -15,12 +15,11 @@ public class Voice{
         this.voice.allocate();
     }
     
-    public void speak(String dir){
-        String text = LeerTXT(dir);
+    public void speak(String text){
         this.voice.speak(text);
     }
     
-    private String LeerTXT(String dir){
+    public String LeerTXT(String dir){
         String txt = "";
         try{
             BufferedReader bf = new BufferedReader(new FileReader(dir));
