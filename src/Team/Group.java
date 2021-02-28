@@ -10,7 +10,9 @@ public class Group implements Team{
     public void add(Personaje character){
         personajes.add(character);
     }
-    
+    public void clear(){
+        this.personajes.clear();
+    }
     public Iterator getCharacters(){
         return this.personajes.iterator();
     }
