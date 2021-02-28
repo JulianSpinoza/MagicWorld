@@ -19,14 +19,20 @@ public class MagicWorld {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Voice voz = new Voice(); 
-        String dir = new File ("src/txt/Wellcome.txt").getAbsolutePath();
-        System.out.println(voz.LeerTXT(dir));
+        Voice voz = new Voice();
+        String texto = voz.LeerTXT("src/txt/Wellcome.txt");
+        System.out.println(texto.replace(".", ".\n"));
+        voz.speak(texto);
+        //String dir = new File ("src/txt/Wellcome.txt").getAbsolutePath();
+        //System.out.println(voz.LeerTXT(dir));
         //voz.speak(voz.LeerTXT(dir));
         //Player jugador = new Player();
         //Memento states = new Memento();
         //states.createState(1, jugador);
         //new Combat(1, jugador);
+        texto = voz.LeerTXT("src/txt/Intro.txt");
+        System.out.println(texto.replace(".", ".\n"));
+        voz.speak(texto);
         voz.MostrarEjemploStacts();
     }
  
