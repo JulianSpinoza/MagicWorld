@@ -17,7 +17,7 @@ public class Voice{
         this.voice.allocate();
     }
     
-    public void speak(String text) throws InterruptedException{
+    public void speak(String text){
         this.voice.setRate(120);
         this.voice.speak(text);
     }
@@ -36,6 +36,11 @@ public class Voice{
             return null;
         }
         return txt;
+    }
+    
+    public void MostrarEjemploStacts(){
+        System.out.println("If your character's element is fire and you are fighting in the hell, your character's attack will be multiply by 1,5");
+        System.out.println("If your character's element is water and your enemy's element is fire, your character's attack will be multiply by 2");
     }
     
 }
