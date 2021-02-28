@@ -22,11 +22,12 @@ public class MagicWorld {
         Voice voz = new Voice(); 
         String dir = new File ("src/txt/Wellcome.txt").getAbsolutePath();
         System.out.println(voz.LeerTXT(dir));
-        voz.speak(voz.LeerTXT(dir));
-        Player jugador = new Player();
-        Memento states = new Memento();
-        states.createState(1, jugador);
-        new Combat(1, jugador);
+        //voz.speak(voz.LeerTXT(dir));
+        //Player jugador = new Player();
+        //Memento states = new Memento();
+        //states.createState(1, jugador);
+        //new Combat(1, jugador);
+        voz.MostrarEjemploStacts();
     }
  
 }

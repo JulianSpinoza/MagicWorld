@@ -39,8 +39,12 @@ public class Voice{
     }
     
     public void MostrarEjemploStacts(){
-        System.out.println("If your character's element is fire and you are fighting in the hell, your character's attack will be multiply by 1,5");
-        System.out.println("If your character's element is water and your enemy's element is fire, your character's attack will be multiply by 2");
+        String E1="If your character's element is fire and you are fighting in the hell, your character's attack will be multiply by 1,5";
+        System.out.println(E1);
+        speak(E1);
+        String E2 ="If your character's element is water and your enemy's element is fire, your character's attack will be multiply by 2";
+        System.out.println(E2);
+        speak(E2);
     }
     
 }
