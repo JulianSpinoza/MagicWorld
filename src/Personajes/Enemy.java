@@ -14,6 +14,9 @@ import Personajes.Character;
 public class Enemy extends Character{
 
     //Methods
+    public Enemy(){
+    }
+    
     public void changePattern(float health){
         
     }
