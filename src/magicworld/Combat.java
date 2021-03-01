@@ -83,7 +83,7 @@ public class Combat {
                 enemigos.clear();
                 enemigos.add(MagicWorld.director.createWizard(4, enemyBuilder, 1, "Casco básico", "Pechera básica", "Arma básica"));
                 enemigos.add(MagicWorld.director.createArcher(4, enemyBuilder, 2, "Casco básico", "Pechera básica", "Arma básica"));
-                enemigos.add(MagicWorld.director.createSwordMan(3, enemyBuilder, 4, null, "Pechera imperial", "Arma imperial"));
+                enemigos.add(MagicWorld.director.createSwordMan(3, enemyBuilder, 4, "Casco básico", "Pechera imperial", "Arma imperial"));
                 break;
             case 5:
                 texto = MagicWorld.voz.LeerTXT("src/txt/combat_5.txt");
@@ -91,7 +91,7 @@ public class Combat {
                 MagicWorld.voz.speak(texto);
                 enemigos.clear();
                 enemigos.add(MagicWorld.director.createSwordMan(5, enemyBuilder, 1, "Casco básico", "Pechera básica", "Arma imperial"));
-                enemigos.add(MagicWorld.director.createArcher(4, enemyBuilder, 1, null, "Pechera básica", "Arma imperial"));
+                enemigos.add(MagicWorld.director.createArcher(4, enemyBuilder, 1, "Casco básico", "Pechera básica", "Arma imperial"));
                 enemigos.add(MagicWorld.director.createArcher(4, enemyBuilder, 2, "Casco imperial", "Pechera básica", "Arma básica"));
                 enemigos.add(MagicWorld.director.createWizard(4, enemyBuilder, 3, "Casco básico", "Pechera básica", "Arma básica"));
                 break;
@@ -101,8 +101,8 @@ public class Combat {
                 MagicWorld.voz.speak(texto);
                 enemigos.clear();
                 enemigos.add(MagicWorld.director.createArcher(6, enemyBuilder, 2, "Casco básico", "Pechera básica", "Arma imperial"));
-                enemigos.add(MagicWorld.director.createWizard(6, enemyBuilder, 1, null, "Pechera básica", "Arma imperial"));
-                enemigos.add(MagicWorld.director.createWizard(5, enemyBuilder, 2, null, "Pechera imperial", "Arma imperial"));
+                enemigos.add(MagicWorld.director.createWizard(6, enemyBuilder, 1, "Casco básico", "Pechera básica", "Arma imperial"));
+                enemigos.add(MagicWorld.director.createWizard(5, enemyBuilder, 2, "Casco básico", "Pechera imperial", "Arma imperial"));
                 enemigos.add(MagicWorld.director.createSwordMan(5, enemyBuilder, 1, "Casco éterea", "Pechera básica", "Arma básica"));
                 break;
             case 7:
@@ -110,11 +110,11 @@ public class Combat {
                 System.out.println(texto.replace(".", ".\n"));
                 MagicWorld.voz.speak(texto);
                 enemigos.clear();
-                enemigos.add(MagicWorld.director.createSwordMan(7, enemyBuilder, 2, null, "Pechera básica", "Arma imperial"));
-                enemigos.add(MagicWorld.director.createSwordMan(7, enemyBuilder, 1, null, "Pechera básica", "Arma imperial"));
-                enemigos.add(MagicWorld.director.createArcher(6, enemyBuilder, 3, null, "Pechera imperial", "Arma imperial"));
-                enemigos.add(MagicWorld.director.createArcher(6, enemyBuilder, 4, null, "Pechera imperial", "Arma imperial"));
-                enemigos.add(MagicWorld.director.createWizard(6, enemyBuilder, 4, null, "Pechera básica", "Arma imperial"));
+                enemigos.add(MagicWorld.director.createSwordMan(7, enemyBuilder, 2, "Casco básico", "Pechera básica", "Arma imperial"));
+                enemigos.add(MagicWorld.director.createSwordMan(7, enemyBuilder, 1, "Casco básico", "Pechera básica", "Arma imperial"));
+                enemigos.add(MagicWorld.director.createArcher(6, enemyBuilder, 3, "Casco básico", "Pechera imperial", "Arma imperial"));
+                enemigos.add(MagicWorld.director.createArcher(6, enemyBuilder, 4, "Casco básico", "Pechera imperial", "Arma imperial"));
+                enemigos.add(MagicWorld.director.createWizard(6, enemyBuilder, 4, "Casco básico", "Pechera básica", "Arma imperial"));
                 break;
             case 8:
                 texto = MagicWorld.voz.LeerTXT("src/txt/combat_8.txt");
@@ -124,7 +124,7 @@ public class Combat {
                 enemigos.add(MagicWorld.director.createArcher(8, enemyBuilder, 1, "Casco imperial", "Pechera imperial", "Arma imperial"));
                 enemigos.add(MagicWorld.director.createArcher(8, enemyBuilder, 2, "Casco básico", "Pechera imperial", "Arma imperial"));
                 enemigos.add(MagicWorld.director.createArcher(8, enemyBuilder, 3, "Casco éterea", "Pechera imperial", "Arma imperial"));
-                enemigos.add(MagicWorld.director.createArcher(8, enemyBuilder, 4, null, "Pechera básica", "Arma éterea"));
+                enemigos.add(MagicWorld.director.createArcher(8, enemyBuilder, 4, "Casco básico", "Pechera básica", "Arma éterea"));
                 break;
             case 9:
                 texto = MagicWorld.voz.LeerTXT("src/txt/combat_9.txt");
@@ -134,18 +134,18 @@ public class Combat {
                 enemigos.add(MagicWorld.director.createWizard(9, enemyBuilder, 1, "Casco imperial", "Pechera imperial", "Arma imperial"));
                 enemigos.add(MagicWorld.director.createWizard(9, enemyBuilder, 2, "Casco básico", "Pechera imperial", "Arma imperial"));
                 enemigos.add(MagicWorld.director.createWizard(9, enemyBuilder, 3, "Casco éterea", "Pechera imperial", "Arma imperial"));
-                enemigos.add(MagicWorld.director.createWizard(9, enemyBuilder, 4, null, "Pechera básica", "Arma éterea"));
+                enemigos.add(MagicWorld.director.createWizard(9, enemyBuilder, 4, "Casco básico", "Pechera básica", "Arma éterea"));
                 break;
             case 10:
                 texto = MagicWorld.voz.LeerTXT("src/txt/combat_10.txt");
                 System.out.println(texto.replace(".", ".\n"));
                 MagicWorld.voz.speak(texto);
                 enemigos.clear();
-                enemigos.add(MagicWorld.director.createWizard(10, enemyBuilder, 3, null, "Pechera éterea", "Arma imperial"));
+                enemigos.add(MagicWorld.director.createWizard(10, enemyBuilder, 3, "Casco básico", "Pechera éterea", "Arma imperial"));
                 enemigos.add(MagicWorld.director.createWizard(10, enemyBuilder, 2, "Casco imperial", "Pechera básica", "Arma éterea"));
                 enemigos.add(MagicWorld.director.createArcher(10, enemyBuilder, 1, "Casco imperial", "Pechera básica", "Arma imperial"));
                 enemigos.add(MagicWorld.director.createArcher(9, enemyBuilder, 3, "Casco imperial", "Pechera imperial", "Arma imperial"));
-                enemigos.add(MagicWorld.director.createSwordMan(9, enemyBuilder, 4, null, "Pechera imperial", "Arma imperial"));
+                enemigos.add(MagicWorld.director.createSwordMan(9, enemyBuilder, 4, "Casco básico", "Pechera imperial", "Arma imperial"));
                 break;
             //FINAL BOSS
             case 11:
@@ -153,8 +153,8 @@ public class Combat {
                 System.out.println(texto.replace(".", ".\n"));
                 MagicWorld.voz.speak(texto);
                 enemigos.clear();
-                enemigos.add(MagicWorld.director.createArcher(10, enemyBuilder, 4, null, "Pechera imperial", "Arma éterea"));
-                enemigos.add(MagicWorld.director.createWizard(10, enemyBuilder, 3, null, "Pechera éterea", "Arma éterea"));
+                enemigos.add(MagicWorld.director.createArcher(10, enemyBuilder, 4, "Casco básico", "Pechera imperial", "Arma éterea"));
+                enemigos.add(MagicWorld.director.createWizard(10, enemyBuilder, 3, "Casco básico", "Pechera éterea", "Arma éterea"));
                 enemigos.add(MagicWorld.director.createWizard(10, enemyBuilder, 2, "Casco imperial", "Pechera imperial", "Arma imperial"));
                 enemigos.add(MagicWorld.director.createArcher(10, enemyBuilder, 2, "Casco imperial", "Pechera imperial", "Arma imperial"));
                 enemigos.add(MagicWorld.director.createSwordMan(12, enemyBuilder, 1, "Casco imperial", "Pechera básica", "Arma imperial"));
@@ -162,6 +162,7 @@ public class Combat {
             default:
                 System.out.println(combat);
         }
+        double maxHealth = jugador.character.getHealth();
         while (!winner(jugador, enemigos)) {
             ArrayList<Role> enemy = enemigos.getCharacters();
             System.out.println("La vida del jugador es: " + jugador.character.getHealth());

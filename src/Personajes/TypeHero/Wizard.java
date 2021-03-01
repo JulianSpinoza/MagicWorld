@@ -93,8 +93,21 @@ public class Wizard extends Role {
                     break;
             }
         }
-        System.out.print("Casting " + this.element.getName() + " spell, with a damage of " + (this.baseDamage + this.element.getElementalDamage()) + " points");
-        enemigo.character.setHealth(enemigo.character.getHealth() - (this.baseDamage + this.element.getElementalDamage()));
+        double totalDamage =((this.character.baseDamage + this.element.getElementalDamage())-enemigo.character.defense);
+        if(totalDamage < 0){
+            System.out.print("Charging " + this.element.getName() + " arrow, with a damage of " + 0 + " points");
+        } else {
+            System.out.print("Charging " + this.element.getName() + " arrow, with a damage of " + totalDamage + " points");
+        }
+        
+        double healthAfterActions = enemigo.character.getHealth() - totalDamage;
+        if(healthAfterActions < 0){
+            enemigo.character.setHealth(0);
+        } else {
+            if(totalDamage >= 0){
+                enemigo.character.setHealth(healthAfterActions);
+            }
+        }
     }
 
     @Override
