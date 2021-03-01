@@ -7,7 +7,9 @@ public class Archer extends Role {
 
     public Archer(Personaje typeCharacter, Element typeElement) {
         super(typeCharacter, typeElement);
-        this.baseDamage = 206;
+        this.character.baseDamage = 206;
+        this.character.defense=20;
+        
     }
 
     @Override
@@ -87,8 +89,8 @@ public class Archer extends Role {
                     break;
             }
         }
-        System.out.print("Cargando flecha de " + this.element.getName() + " y se hizo un daño de " + (this.baseDamage + this.element.getElementalDamage()) + " puntos");
-        enemigo.character.setHealth(enemigo.character.getHealth() - (this.baseDamage + this.element.getElementalDamage()));
+        System.out.print("Cargando flecha de " + this.element.getName() + " y se hizo un daño de " + ((this.character.baseDamage + this.element.getElementalDamage())-enemigo.character.defense) + " puntos");
+        enemigo.character.setHealth(enemigo.character.getHealth() - (this.character.baseDamage + this.element.getElementalDamage()-enemigo.character.defense));
     }
 
     @Override

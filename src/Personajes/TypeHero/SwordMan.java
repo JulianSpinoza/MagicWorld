@@ -8,6 +8,7 @@ public class SwordMan extends Role {
     public SwordMan(Personaje typeCharacter, Element typeElement) {
         super(typeCharacter, typeElement);
         this.baseDamage = 206;
+        this.defense=50;
     }
 
     @Override

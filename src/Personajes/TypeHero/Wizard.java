@@ -8,6 +8,7 @@ public class Wizard extends Role {
     public Wizard(Personaje typeCharacter, Element typeElement) {
         super(typeCharacter, typeElement);
         this.baseDamage = 206;
+        this.defense=10;
     }
 
     @Override

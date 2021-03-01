@@ -70,16 +70,19 @@ public class BuilderEnemy implements BuilderCharacter {
     @Override
     public void setFront(String name) {
         this.enemy.character.equipment[0] = MagicWorld.armory.search("Front", name);
+        this.enemy.character.defense*=this.enemy.character.equipment[0].multiplier;
     }
 
     @Override
     public void setHelmet(String name) {
         this.enemy.character.equipment[1] = MagicWorld.armory.search("Helmet", name);
+        this.enemy.character.defense*=this.enemy.character.equipment[1].multiplier;
     }
 
     @Override
     public void setWeapon(String name) {
         this.enemy.character.equipment[2] = MagicWorld.armory.search("Weapon", name);
+        this.enemy.character.baseDamage*=this.enemy.character.equipment[1].multiplier;
     }
 
     @Override

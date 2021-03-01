@@ -29,7 +29,6 @@ public class Combat {
                 //texto = MagicWorld.voz.LeerTXT("src/txt/combat_0.txt");
                 //System.out.println(texto.replace(".", ".\n"));
                 //MagicWorld.voz.speak(texto);
-                
                 enemigos.clear();
                 enemigos.add(MagicWorld.director.createArcher(1, enemyBuilder, 1, null, "helmet1", null));
                 break;
@@ -146,31 +145,30 @@ public class Combat {
         }
         while (!winner(jugador, enemigos)) {
             ArrayList<Role> enemy = enemigos.getCharacters();
-            System.out.println("La vida del jugador es: "+jugador.character.getHealth());
-            for (int i = 0; i<enemy.size();i++) {
-                System.out.println("index: "+i+" Enemigo: "+mostrarStats(enemy.get(i)));
+            System.out.println("La vida del jugador es: " + jugador.character.getHealth());
+            System.out.println("La defensa del jugador es: " + jugador.character.defense);
+            System.out.println("El daño base es: " + jugador.character.baseDamage);
+            for (int i = 0; i < enemy.size(); i++) {
+                System.out.println("index: " + i + " Enemigo: " + mostrarStats(enemy.get(i)));
             }
             System.out.println("Escoje al enemigo que deseas atacar");
             int y = MagicWorld.sc.nextInt();
             jugador.attack(elemento, enemigos.getCharacter(y), multiplier);
             System.out.println("\nEl jugador atacó");
-            for (int i = 0; i<enemy.size();i++) {
+            for (int i = 0; i < enemy.size(); i++) {
                 Role enemigo = enemy.get(i);
-                if (enemigo.character.getHealth()>0){
+                if (enemigo.character.getHealth() > 0) {
                     enemy.get(i).attack(elemento, jugador, multiplier);
-                    System.out.println("El enemigo atacó");
+                    System.out.println("\nEl enemigo atacó");
                 }
             }
         }
-        if (jugador.character.getHealth()>0){
-            jugador.character.setLevel(jugador.character.getLevel()+1);
+        if (jugador.character.getHealth() > 0) {
+            jugador.character.setLevel(jugador.character.getLevel() + 1);
             jugador.character.restaurarVida();
             System.out.println("Gano!");
-        }
-        else{
-            System.out.println(jugador.character.getLevel());
-            jugador = MagicWorld.states.getState(jugador.character.getLevel());
-            
+        } else {
+            jugador.character.restaurarVida();
             System.out.println(jugador.character.getHealth());
             System.out.println("Perdio!");
         }
@@ -184,9 +182,9 @@ public class Combat {
         } else {
             ArrayList<Role> enemy = enemigos.getCharacters();
             int remaining = 0;
-            for(int i =0; i<enemy.size();i++){
+            for (int i = 0; i < enemy.size(); i++) {
                 remaining++;
-                if(enemy.get(i).character.getHealth()<=0){
+                if (enemy.get(i).character.getHealth() <= 0) {
                     remaining--;
                 }
             }

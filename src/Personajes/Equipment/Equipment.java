@@ -7,6 +7,7 @@ public abstract class Equipment {
     protected Personaje character;
     public String name;
     public String description;
+    public double multiplier;
 
     public Equipment(String name, String description) {
         this.name = name;

@@ -17,24 +17,24 @@ import Team.Team;
 public abstract class Personaje implements Team {
 
     //Attributes
-    protected float baseDamage;
+    public float baseDamage;
     protected double health;
-    protected float defense;
+    public float defense;
     protected float criticalRate;
     protected int level;
     public Equipment[] equipment = new Equipment[3];
-
     //Methods
     public abstract void attack(Element escenario, Role enemigo, double multiplier);
-    
-    public void setLevel(int lvl){
-        this.level=lvl;
+
+    public void setLevel(int lvl) {
+        this.level = lvl;
+        this.defense*=lvl;
     }
-    
-    public int getLevel(){
+
+    public int getLevel() {
         return this.level;
     }
-    
+
     public double getHealth() {
         return this.health;
     }
@@ -42,9 +42,9 @@ public abstract class Personaje implements Team {
     public void setHealth(double newHealth) {
         this.health = newHealth;
     }
-    
-    public void restaurarVida(){
-        this.health=300*this.level;
+
+    public void restaurarVida() {
+        this.health = 300 * this.level;
     }
-    
+
 }

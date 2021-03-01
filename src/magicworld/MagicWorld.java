@@ -23,7 +23,6 @@ public class MagicWorld {
     public static Armory armory = Armory.getInstance();
     public static Director director = new Director();
     public static Voice voz = new Voice();
-    public static Memento states = new Memento();
     public static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -35,10 +34,8 @@ public class MagicWorld {
         System.out.println(texto.replace(".", ".\n"));
         //voz.speak(texto);
         Role jugador = director.createArcher(1, new BuilderHero(), 1, null, "helmet1", null);
-        while(jugador.character.getLevel()<=12){
-            states.createState(jugador.character.getLevel(), jugador);
-            
-            new Combat(jugador.character.getLevel()-1, jugador);
+        while (jugador.character.getLevel() <= 12) {
+            new Combat(jugador.character.getLevel() - 1, jugador);
         }
         System.out.println("Ganaste, gracias. Buena tarde!");
     }
