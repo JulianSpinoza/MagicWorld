@@ -9,6 +9,7 @@ import CreacionCharacters.BuilderHero;
 import CreacionCharacters.Director;
 import Personajes.Equipment.Armory;
 import Personajes.TypeHero.Role;
+import java.util.Scanner;
 
 /**
  *
@@ -23,6 +24,7 @@ public class MagicWorld {
     public static Director director = new Director();
     public static Voice voz = new Voice();
     public static Memento states = new Memento();
+    public static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         armory.addFront("helmet1", "example of helmet", 1, 2);
@@ -33,9 +35,9 @@ public class MagicWorld {
         System.out.println(texto.replace(".", ".\n"));
         //voz.speak(texto);
         Role jugador = director.createArcher(1, new BuilderHero(), 1, null, "helmet1", null);
-        System.out.println("MAIN "+jugador.character.getLevel());
         while(jugador.character.getLevel()<=12){
             states.createState(jugador.character.getLevel(), jugador);
+            
             new Combat(jugador.character.getLevel()-1, jugador);
         }
         System.out.println("Ganaste, gracias. Buena tarde!");

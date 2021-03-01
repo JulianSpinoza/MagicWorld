@@ -16,7 +16,7 @@ public class Director {
 
     public Role createArcher(int lvl, BuilderCharacter builder, int typeElement, String nameHelmet, String nameFront, String nameWeapon) {
         builder.setCategoryAndElement(1, typeElement);
-        builder.reset();
+        //builder.reset();
         if (nameFront != null) {
             builder.setFront(nameFront);
         }

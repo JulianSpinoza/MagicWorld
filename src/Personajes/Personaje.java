@@ -44,7 +44,7 @@ public abstract class Personaje implements Team {
     }
     
     public void restaurarVida(){
-        this.health=50*this.level;
+        this.health=300*this.level;
     }
     
 }

@@ -5,6 +5,7 @@ import Personajes.*;
 import Personajes.TypeElement.*;
 import Personajes.TypeHero.Role;
 import Team.Group;
+import java.util.ArrayList;
 import java.util.Iterator;
 
 public class Combat {
@@ -15,6 +16,7 @@ public class Combat {
         double multiplier = 1.3;
         Group enemigos = new Group();
         BuilderEnemy enemyBuilder = new BuilderEnemy();
+        elemento = new Fire();
         switch (combat) {
             /*
             1:Fuego
@@ -24,11 +26,10 @@ public class Combat {
              */
             //Introduccion
             case 0:
-                System.out.println("Combate 0");
                 //texto = MagicWorld.voz.LeerTXT("src/txt/combat_0.txt");
                 //System.out.println(texto.replace(".", ".\n"));
                 //MagicWorld.voz.speak(texto);
-                elemento = new Fire();
+                
                 enemigos.clear();
                 enemigos.add(MagicWorld.director.createArcher(1, enemyBuilder, 1, null, "helmet1", null));
                 break;
@@ -144,38 +145,48 @@ public class Combat {
                 System.out.println(combat);
         }
         while (!winner(jugador, enemigos)) {
-            Iterator<Role> enemy = enemigos.getCharacters();
-            while (enemy.hasNext()) {
-                System.out.println(mostrarStats(enemy.next()));
+            ArrayList<Role> enemy = enemigos.getCharacters();
+            System.out.println("La vida del jugador es: "+jugador.character.getHealth());
+            for (int i = 0; i<enemy.size();i++) {
+                System.out.println("index: "+i+" Enemigo: "+mostrarStats(enemy.get(i)));
             }
-            jugador.attack(elemento, enemy.next(), multiplier);
-
-            while (enemy.hasNext()) {
-                enemy.next().attack(elemento, jugador, multiplier);
+            System.out.println("Escoje al enemigo que deseas atacar");
+            int y = MagicWorld.sc.nextInt();
+            jugador.attack(elemento, enemigos.getCharacter(y), multiplier);
+            System.out.println("\nEl jugador atacó");
+            for (int i = 0; i<enemy.size();i++) {
+                Role enemigo = enemy.get(i);
+                if (enemigo.character.getHealth()>0){
+                    enemy.get(i).attack(elemento, jugador, multiplier);
+                    System.out.println("El enemigo atacó");
+                }
             }
         }
-        if (jugador.character.getHealth()!=0){
+        if (jugador.character.getHealth()>0){
             jugador.character.setLevel(jugador.character.getLevel()+1);
             jugador.character.restaurarVida();
             System.out.println("Gano!");
         }
         else{
+            System.out.println(jugador.character.getLevel());
             jugador = MagicWorld.states.getState(jugador.character.getLevel());
+            
+            System.out.println(jugador.character.getHealth());
             System.out.println("Perdio!");
         }
         System.out.println("Combate finalizado");
 
     }
 
-    private boolean winner(Personaje jugador, Group enemigos) {
-        if (jugador.getHealth() == 0) {
+    private boolean winner(Role jugador, Group enemigos) {
+        if (jugador.character.getHealth() < 0) {
             return true;
         } else {
-            Iterator<Enemy> enemy = enemigos.getCharacters();
+            ArrayList<Role> enemy = enemigos.getCharacters();
             int remaining = 0;
-            while (enemy.hasNext()) {
+            for(int i =0; i<enemy.size();i++){
                 remaining++;
-                if (enemy.next().getHealth() == 0) {
+                if(enemy.get(i).character.getHealth()<=0){
                     remaining--;
                 }
             }
@@ -187,8 +198,8 @@ public class Combat {
     }
 
     private String mostrarStats(Role enemy) {
-        String stats = "";
-        stats += "La vida del enemigo es: " + enemy.character.getHealth() + " y su elemeneto es: " + enemy.element.getName();
+        String stats;
+        stats = "La vida del enemigo es: " + enemy.character.getHealth() + " y su elemeneto es: " + enemy.element.getName();
         return stats;
     }
 }

@@ -62,6 +62,7 @@ public class BuilderEnemy implements BuilderCharacter {
     @Override
     public Role getFinal() {
         Role finalEnemy = this.enemy;
+        finalEnemy.character.restaurarVida();
         //reset();
         return finalEnemy;
     }

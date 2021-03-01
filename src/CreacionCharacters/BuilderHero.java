@@ -68,6 +68,7 @@ public class BuilderHero implements BuilderCharacter {
     @Override
     public Role getFinal() {
         Role finalHero = this.hero;
+        finalHero.character.restaurarVida();
         //reset();
         return finalHero;
     }
@@ -89,7 +90,6 @@ public class BuilderHero implements BuilderCharacter {
 
     @Override
     public void setLevel(int lvl) {
-        System.out.println(this.hero.character.getLevel());
         this.hero.character.setLevel(lvl);
     }
 

@@ -87,7 +87,7 @@ public class Wizard extends Role {
                     break;
             }
         }
-        System.out.print("Lanzando hechizo de " + this.element.getName() + " y se redujo la vida del enemigo en " + (this.baseDamage + this.element.getElementalDamage()) + " puntos");
+        System.out.print("Lanzando hechizo de " + this.element.getName() + " y se hizo un daño de " + (this.baseDamage + this.element.getElementalDamage()) + " puntos");
         enemigo.character.setHealth(enemigo.character.getHealth() - (this.baseDamage + this.element.getElementalDamage()));
     }
 

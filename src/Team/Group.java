@@ -2,7 +2,6 @@ package Team;
 
 import Personajes.TypeHero.Role;
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class Group implements Team {
 
@@ -16,7 +15,16 @@ public class Group implements Team {
         this.personajes.clear();
     }
 
-    public Iterator getCharacters() {
-        return this.personajes.iterator();
+    public ArrayList getCharacters() {
+        return this.personajes;
+    }
+    
+    public Role getCharacter(int index){
+        try{
+            return this.personajes.get(index);
+        } catch(IndexOutOfBoundsException e){
+            System.out.println("Indice no encotrado, atacando al primero (así este muerto :v)");
+            return this.personajes.get(0);
+        }
     }
 }
