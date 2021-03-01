@@ -11,7 +11,7 @@ public class Wind implements Element {
     public String name;
 
     public Wind() {
-        name = "Fuego";
+        name = "Wind";
         elementalDamage = 5.3;
     }
 

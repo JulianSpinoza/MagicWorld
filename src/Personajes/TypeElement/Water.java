@@ -11,7 +11,7 @@ public class Water implements Element {
     public String name;
 
     public Water() {
-        name = "Agua";
+        name = "Water";
         elementalDamage = 2.3;
     }
 

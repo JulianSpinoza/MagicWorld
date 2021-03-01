@@ -11,7 +11,7 @@ public class Fire implements Element {
     public String name;
 
     public Fire() {
-        name = "Fuego";
+        name = "Fire";
         elementalDamage = 8.3;
     }
 

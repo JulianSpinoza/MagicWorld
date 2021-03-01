@@ -21,79 +21,79 @@ public class SwordMan extends Role {
         if (this.element.getName().equals(escenario.getName())) {
             this.element.setElementalDamage(this.element.getElementalDamage() * multiplier);
         }
-        if (this.element.getName().equals("Fuego")) {
+        if (this.element.getName().equals("Fire")) {
             switch (enemigo.element.getName()) {
-                case "Fuego":
+                case "Fire":
                     this.element.setElementalDamage(this.element.getElementalDamage() * 1);
                     break;
-                case "Agua":
+                case "Water":
                     this.element.setElementalDamage(this.element.getElementalDamage() * 0.5);
                     break;
-                case "Tierra":
+                case "Earth":
                     this.element.setElementalDamage(this.element.getElementalDamage() * 0.8);
                     break;
-                case "Viento":
+                case "Wind":
                     this.element.setElementalDamage(this.element.getElementalDamage() * 2);
                     break;
                 default:
                     break;
             }
         }
-        if (this.element.getName().equals("Agua")) {
+        if (this.element.getName().equals("Water")) {
             switch (enemigo.element.getName()) {
-                case "Fuego":
+                case "Fire":
                     this.element.setElementalDamage(this.element.getElementalDamage() * 2);
                     break;
-                case "Agua":
+                case "Water":
                     this.element.setElementalDamage(this.element.getElementalDamage() * 1);
                     break;
-                case "Tierra":
+                case "Earth":
                     this.element.setElementalDamage(this.element.getElementalDamage() * 1.3);
                     break;
-                case "Viento":
+                case "Wind":
                     this.element.setElementalDamage(this.element.getElementalDamage() * 0.7);
                     break;
                 default:
                     break;
             }
         }
-        if (this.element.getName().equals("Tierra")) {
+        if (this.element.getName().equals("Earth")) {
             switch (enemigo.element.getName()) {
-                case "Fuego":
+                case "Fire":
                     this.element.setElementalDamage(this.element.getElementalDamage() * 2);
                     break;
-                case "Agua":
+                case "Water":
                     this.element.setElementalDamage(this.element.getElementalDamage() * 0.7);
                     break;
-                case "Tierra":
+                case "Earth":
                     this.element.setElementalDamage(this.element.getElementalDamage() * 1);
                     break;
-                case "Viento":
+                case "Wind":
                     this.element.setElementalDamage(this.element.getElementalDamage() * 0);
                     break;
                 default:
                     break;
             }
         }
-        if (this.element.getName().equals("Viento")) {
+        if (this.element.getName().equals("Wind")) {
             switch (enemigo.element.getName()) {
-                case "Fuego":
+                case "Fire":
                     this.element.setElementalDamage(this.element.getElementalDamage() * 0.7);
                     break;
-                case "Agua":
+                case "Water":
                     this.element.setElementalDamage(this.element.getElementalDamage() * 1.5);
                     break;
-                case "Tierra":
+                case "Earth":
                     this.element.setElementalDamage(this.element.getElementalDamage() * 2);
                     break;
-                case "Viento":
+                case "Wind":
                     this.element.setElementalDamage(this.element.getElementalDamage() * 1);
                     break;
                 default:
                     break;
             }
         }
-        System.out.print("Atacando con espada de " + this.element.getName() + " y se hizo un daño de " + (this.baseDamage + this.element.getElementalDamage()) + " puntos");
+        System.out.print("Attacking with " + this.element.getName() + " sword, with a damage of " + (this.baseDamage + this.element.getElementalDamage()) + " points");
         enemigo.character.setHealth(enemigo.character.getHealth() - (this.baseDamage + this.element.getElementalDamage()));
     }
 

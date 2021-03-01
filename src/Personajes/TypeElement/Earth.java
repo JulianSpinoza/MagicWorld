@@ -16,7 +16,7 @@ public class Earth implements Element {
     public String name;
 
     public Earth() {
-        name = "Tierra";
+        name = "Earth";
         elementalDamage = 6.3;
     }
 
