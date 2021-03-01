@@ -42,9 +42,9 @@ public class Combat {
              */
             //Introduccion
             case 0:
-                //texto = MagicWorld.voz.LeerTXT("src/txt/combat_0.txt");
-                //System.out.println(texto.replace(".", ".\n"));
-                //MagicWorld.voz.speak(texto);
+                texto = MagicWorld.voz.LeerTXT("src/txt/combat_0.txt");
+                System.out.println(texto.replace(".", ".\n"));
+                MagicWorld.voz.speak(texto);
                 enemigos.clear();
                 enemigos.add(MagicWorld.director.createArcher(1, enemyBuilder, 1, "Casco básico", null, "Arma básica"));
                 break;
@@ -57,35 +57,35 @@ public class Combat {
                 enemigos.add(MagicWorld.director.createSwordMan(1, enemyBuilder, 2, "Casco básico", null, "Arma básica"));
                 break;
             case 2:
-                //texto = MagicWorld.voz.LeerTXT("src/txt/combat_2.txt");
-                //System.out.println(texto.replace(".", ".\n"));
-                //MagicWorld.voz.speak(texto);
+                texto = MagicWorld.voz.LeerTXT("src/txt/combat_2.txt");
+                System.out.println(texto.replace(".", ".\n"));
+                MagicWorld.voz.speak(texto);
                 enemigos.clear();
                 enemigos.add(MagicWorld.director.createArcher(2, enemyBuilder, 2, "Casco básico", "Pechera básica", "Arma básica"));
                 enemigos.add(MagicWorld.director.createSwordMan(1, enemyBuilder, 3, "Casco básico", "Pechera imperial", "Arma básica"));
                 break;
             case 3:
-                //texto = MagicWorld.voz.LeerTXT("src/txt/combat_3.txt");
-                //System.out.println(texto.replace(".", ".\n"));
-                //MagicWorld.voz.speak(texto);
+                texto = MagicWorld.voz.LeerTXT("src/txt/combat_3.txt");
+                System.out.println(texto.replace(".", ".\n"));
+                MagicWorld.voz.speak(texto);
                 enemigos.clear();
                 enemigos.add(MagicWorld.director.createWizard(3, enemyBuilder, 2, "Casco imperial", "Pechera básica", "Arma básica"));
                 enemigos.add(MagicWorld.director.createArcher(2, enemyBuilder, 3, "Casco imperial", "Pechera básica", "Arma imperial"));
                 enemigos.add(MagicWorld.director.createSwordMan(2, enemyBuilder, 4, "Casco básico", "Pechera básica", "Arma básica"));
                 break;
             case 4:
-                //texto = MagicWorld.voz.LeerTXT("src/txt/combat_4.txt");
-                //System.out.println(texto.replace(".", ".\n"));
-                //MagicWorld.voz.speak(texto);
+                texto = MagicWorld.voz.LeerTXT("src/txt/combat_4.txt");
+                System.out.println(texto.replace(".", ".\n"));
+                MagicWorld.voz.speak(texto);
                 enemigos.clear();
                 enemigos.add(MagicWorld.director.createWizard(4, enemyBuilder, 1, "Casco básico", "Pechera básica", "Arma básica"));
                 enemigos.add(MagicWorld.director.createArcher(4, enemyBuilder, 2, "Casco básico", "Pechera básica", "Arma básica"));
                 enemigos.add(MagicWorld.director.createSwordMan(3, enemyBuilder, 4, null, "Pechera imperial", "Arma imperial"));
                 break;
             case 5:
-                //texto = MagicWorld.voz.LeerTXT("src/txt/combat_5.txt");
-                //System.out.println(texto.replace(".", ".\n"));
-                //MagicWorld.voz.speak(texto);
+                texto = MagicWorld.voz.LeerTXT("src/txt/combat_5.txt");
+                System.out.println(texto.replace(".", ".\n"));
+                MagicWorld.voz.speak(texto);
                 enemigos.clear();
                 enemigos.add(MagicWorld.director.createSwordMan(5, enemyBuilder, 1, "Casco básico", "Pechera básica", "Arma imperial"));
                 enemigos.add(MagicWorld.director.createArcher(4, enemyBuilder, 1, null, "Pechera básica", "Arma imperial"));
@@ -93,9 +93,9 @@ public class Combat {
                 enemigos.add(MagicWorld.director.createWizard(4, enemyBuilder, 3, "Casco básico", "Pechera básica", "Arma básica"));
                 break;
             case 6:
-                //texto = MagicWorld.voz.LeerTXT("src/txt/combat_6.txt");
-                //System.out.println(texto.replace(".", ".\n"));
-                //MagicWorld.voz.speak(texto);
+                texto = MagicWorld.voz.LeerTXT("src/txt/combat_6.txt");
+                System.out.println(texto.replace(".", ".\n"));
+                MagicWorld.voz.speak(texto);
                 enemigos.clear();
                 enemigos.add(MagicWorld.director.createArcher(6, enemyBuilder, 2, "Casco básico", "Pechera básica", "Arma imperial"));
                 enemigos.add(MagicWorld.director.createWizard(6, enemyBuilder, 1, null, "Pechera básica", "Arma imperial"));
@@ -103,9 +103,9 @@ public class Combat {
                 enemigos.add(MagicWorld.director.createSwordMan(5, enemyBuilder, 1, "Casco éterea", "Pechera básica", "Arma básica"));
                 break;
             case 7:
-                //texto = MagicWorld.voz.LeerTXT("src/txt/combat_7.txt");
-                //System.out.println(texto.replace(".", ".\n"));
-                //MagicWorld.voz.speak(texto);
+                texto = MagicWorld.voz.LeerTXT("src/txt/combat_7.txt");
+                System.out.println(texto.replace(".", ".\n"));
+                MagicWorld.voz.speak(texto);
                 enemigos.clear();
                 enemigos.add(MagicWorld.director.createSwordMan(7, enemyBuilder, 2, null, "Pechera básica", "Arma imperial"));
                 enemigos.add(MagicWorld.director.createSwordMan(7, enemyBuilder, 1, null, "Pechera básica", "Arma imperial"));
@@ -114,9 +114,9 @@ public class Combat {
                 enemigos.add(MagicWorld.director.createWizard(6, enemyBuilder, 4, null, "Pechera básica", "Arma imperial"));
                 break;
             case 8:
-                //texto = MagicWorld.voz.LeerTXT("src/txt/combat_8.txt");
-                //System.out.println(texto.replace(".", ".\n"));
-                //MagicWorld.voz.speak(texto);
+                texto = MagicWorld.voz.LeerTXT("src/txt/combat_8.txt");
+                System.out.println(texto.replace(".", ".\n"));
+                MagicWorld.voz.speak(texto);
                 enemigos.clear();
                 enemigos.add(MagicWorld.director.createArcher(8, enemyBuilder, 1, "Casco imperial", "Pechera imperial", "Arma imperial"));
                 enemigos.add(MagicWorld.director.createArcher(8, enemyBuilder, 2, "Casco básico", "Pechera imperial", "Arma imperial"));
@@ -124,9 +124,9 @@ public class Combat {
                 enemigos.add(MagicWorld.director.createArcher(8, enemyBuilder, 4, null, "Pechera básica", "Arma éterea"));
                 break;
             case 9:
-                //texto = MagicWorld.voz.LeerTXT("src/txt/combat_9.txt");
-                //System.out.println(texto.replace(".", ".\n"));
-                //MagicWorld.voz.speak(texto);
+                texto = MagicWorld.voz.LeerTXT("src/txt/combat_9.txt");
+                System.out.println(texto.replace(".", ".\n"));
+                MagicWorld.voz.speak(texto);
                 enemigos.clear();
                 enemigos.add(MagicWorld.director.createWizard(9, enemyBuilder, 1, "Casco imperial", "Pechera imperial", "Arma imperial"));
                 enemigos.add(MagicWorld.director.createWizard(9, enemyBuilder, 2, "Casco básico", "Pechera imperial", "Arma imperial"));
@@ -134,9 +134,9 @@ public class Combat {
                 enemigos.add(MagicWorld.director.createWizard(9, enemyBuilder, 4, null, "Pechera básica", "Arma éterea"));
                 break;
             case 10:
-                //texto = MagicWorld.voz.LeerTXT("src/txt/combat_10.txt");
-                //System.out.println(texto.replace(".", ".\n"));
-                //MagicWorld.voz.speak(texto);
+                texto = MagicWorld.voz.LeerTXT("src/txt/combat_10.txt");
+                System.out.println(texto.replace(".", ".\n"));
+                MagicWorld.voz.speak(texto);
                 enemigos.clear();
                 enemigos.add(MagicWorld.director.createWizard(10, enemyBuilder, 3, null, "Pechera éterea", "Arma imperial"));
                 enemigos.add(MagicWorld.director.createWizard(10, enemyBuilder, 2, "Casco imperial", "Pechera básica", "Arma éterea"));
@@ -146,9 +146,9 @@ public class Combat {
                 break;
             //FINAL BOSS
             case 11:
-                //texto = MagicWorld.voz.LeerTXT("src/txt/combat_11.txt");
-                //System.out.println(texto.replace(".", ".\n"));
-                //MagicWorld.voz.speak(texto);
+                texto = MagicWorld.voz.LeerTXT("src/txt/combat_11.txt");
+                System.out.println(texto.replace(".", ".\n"));
+                MagicWorld.voz.speak(texto);
                 enemigos.clear();
                 enemigos.add(MagicWorld.director.createArcher(10, enemyBuilder, 4, null, "Pechera imperial", "Arma éterea"));
                 enemigos.add(MagicWorld.director.createWizard(10, enemyBuilder, 3, null, "Pechera éterea", "Arma éterea"));
@@ -189,6 +189,7 @@ public class Combat {
             System.out.println("Perdio!");
         }
         System.out.println("Combate finalizado");
+        MagicWorld.voz.speak("Master Kill");
 
     }
 

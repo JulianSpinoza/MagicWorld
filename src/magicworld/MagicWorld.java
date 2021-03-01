@@ -28,10 +28,10 @@ public class MagicWorld {
     public static void main(String[] args) {
         String texto = voz.LeerTXT("src/txt/Wellcome.txt");
         System.out.println(texto.replace(".", ".\n"));
-        //voz.speak(texto);
+        voz.speak(texto);
         texto = voz.LeerTXT("src/txt/Intro.txt");
         System.out.println(texto.replace(".", ".\n"));
-        //voz.speak(texto);
+        voz.speak(texto);
         Role jugador = director.createArcher(1, new BuilderHero(), 1, "Casco básico", "Pechera éterea", "Arma imperial");
         while (jugador.character.getLevel() <= 12) {
             new Combat(jugador.character.getLevel() - 1, jugador);
