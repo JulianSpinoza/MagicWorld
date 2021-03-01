@@ -1,16 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package CreacionCharacters;
 
-import Personajes.Personaje;
 import Personajes.TypeHero.Role;
 
-/**
- *
- * @author USERS
+/*
+ * AUTORES: Yuneider Parada Pérez - 20191020058
+ * Julián Camilo Espinosa Morales - 20191020073
+ * Brayan Steven Arellano Espinosa - 20191020151
  */
 public class Director {
 
@@ -31,7 +26,7 @@ public class Director {
 
     }
 
-    public Role createSwordMan(int lvl,BuilderCharacter builder, int typeElement, String nameHelmet, String nameFront, String nameWeapon) {
+    public Role createSwordMan(int lvl, BuilderCharacter builder, int typeElement, String nameHelmet, String nameFront, String nameWeapon) {
         builder.setCategoryAndElement(3, typeElement);
         //builder.reset();
         if (nameFront != null) {
@@ -48,7 +43,7 @@ public class Director {
 
     }
 
-    public Role createWizard(int lvl,BuilderCharacter builder, int typeElement, String nameHelmet, String nameFront, String nameWeapon) {
+    public Role createWizard(int lvl, BuilderCharacter builder, int typeElement, String nameHelmet, String nameFront, String nameWeapon) {
         builder.setCategoryAndElement(2, typeElement);
         //builder.reset();
         if (nameFront != null) {

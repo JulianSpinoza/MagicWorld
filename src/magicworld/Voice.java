@@ -4,6 +4,11 @@ import com.sun.speech.freetts.VoiceManager;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
+/*
+ * AUTORES: Yuneider Parada Pérez - 20191020058
+ * Julián Camilo Espinosa Morales - 20191020073
+ * Brayan Steven Arellano Espinosa - 20191020151
+ */
 public class Voice {
 
     private String name;

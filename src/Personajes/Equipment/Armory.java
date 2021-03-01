@@ -1,15 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Personajes.Equipment;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author USERS
+/*
+ * AUTORES: Yuneider Parada Pérez - 20191020058
+ * Julián Camilo Espinosa Morales - 20191020073
+ * Brayan Steven Arellano Espinosa - 20191020151
  */
 public class Armory {
 
@@ -19,15 +15,15 @@ public class Armory {
     public ArrayList<Weapon> weapon = new ArrayList<Weapon>();
 
     private Armory() {
-        addFront("Pechera básica","Pechera inicial",1,1.5);
-        addFront("Pechera imperial","Pechera hecha de los imperios",1.5,2);
-        addFront("Pechera éterea","Pechera forjada entre los dos mundo",1,3);
-        addHelmet("Casco básico","Casco inicial",1.2);
-        addHelmet("Casco imperial","Casco hecha de los imperios",1.5);
-        addHelmet("Casco éterea","Casco forjada entre los dos mundo",2);
-        addWeapon("Arma básica","Arma inicial",1.3);
-        addWeapon("Arma imperial","Arma hecha de los imperios",1.7);
-        addWeapon("Arma éterea","Arma forjada entre los dos mundo",2.5);
+        addFront("Pechera básica", "Pechera inicial", 1, 1.5);
+        addFront("Pechera imperial", "Pechera hecha de los imperios", 1.5, 2);
+        addFront("Pechera éterea", "Pechera forjada entre los dos mundo", 1, 3);
+        addHelmet("Casco básico", "Casco inicial", 1.2);
+        addHelmet("Casco imperial", "Casco hecha de los imperios", 1.5);
+        addHelmet("Casco éterea", "Casco forjada entre los dos mundo", 2);
+        addWeapon("Arma básica", "Arma inicial", 1.3);
+        addWeapon("Arma imperial", "Arma hecha de los imperios", 1.7);
+        addWeapon("Arma éterea", "Arma forjada entre los dos mundo", 2.5);
     }
 
     public static Armory getInstance() {

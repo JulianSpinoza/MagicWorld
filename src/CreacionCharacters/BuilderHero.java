@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package CreacionCharacters;
 
 import Personajes.Player;
@@ -17,9 +12,10 @@ import Personajes.TypeHero.SwordMan;
 import Personajes.TypeHero.Wizard;
 import magicworld.MagicWorld;
 
-/**
- *
- * @author USERS
+/*
+ * AUTORES: Yuneider Parada Pérez - 20191020058
+ * Julián Camilo Espinosa Morales - 20191020073
+ * Brayan Steven Arellano Espinosa - 20191020151
  */
 public class BuilderHero implements BuilderCharacter {
 
@@ -76,19 +72,19 @@ public class BuilderHero implements BuilderCharacter {
     @Override
     public void setFront(String name) {
         this.hero.character.equipment[0] = MagicWorld.armory.search("Front", name);
-        this.hero.character.defense*=this.hero.character.equipment[0].multiplier;
+        this.hero.character.defense *= this.hero.character.equipment[0].multiplier;
     }
 
     @Override
     public void setHelmet(String name) {
         this.hero.character.equipment[1] = MagicWorld.armory.search("Helmet", name);
-        this.hero.character.defense*=this.hero.character.equipment[1].multiplier;
+        this.hero.character.defense *= this.hero.character.equipment[1].multiplier;
     }
 
     @Override
     public void setWeapon(String name) {
         this.hero.character.equipment[2] = MagicWorld.armory.search("Weapon", name);
-        this.hero.character.baseDamage*=this.hero.character.equipment[2].multiplier;
+        this.hero.character.baseDamage *= this.hero.character.equipment[2].multiplier;
     }
 
     @Override

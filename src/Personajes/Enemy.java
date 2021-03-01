@@ -1,16 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Personajes;
 
 import Personajes.TypeElement.Element;
 import Personajes.TypeHero.Role;
 
-/**
- *
- * @author USERS
+/*
+ * AUTORES: Yuneider Parada Pérez - 20191020058
+ * Julián Camilo Espinosa Morales - 20191020073
+ * Brayan Steven Arellano Espinosa - 20191020151
  */
 public class Enemy extends Personaje {
 

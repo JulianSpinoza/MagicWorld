@@ -5,9 +5,10 @@
  */
 package Personajes.TypeElement;
 
-/**
- *
- * @author 57315
+/*
+ * AUTORES: Yuneider Parada Pérez - 20191020058
+ * Julián Camilo Espinosa Morales - 20191020073
+ * Brayan Steven Arellano Espinosa - 20191020151
  */
 public class Earth implements Element {
 

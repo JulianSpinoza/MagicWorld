@@ -1,12 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package CreacionCharacters;
 
 import Personajes.Enemy;
-import Personajes.Personaje;
 import Personajes.TypeElement.Element;
 import Personajes.TypeElement.Fire;
 import Personajes.TypeElement.Water;
@@ -16,9 +10,10 @@ import Personajes.TypeHero.SwordMan;
 import Personajes.TypeHero.Wizard;
 import magicworld.MagicWorld;
 
-/**
- *
- * @author USERS
+/*
+ * AUTORES: Yuneider Parada Pérez - 20191020058
+ * Julián Camilo Espinosa Morales - 20191020073
+ * Brayan Steven Arellano Espinosa - 20191020151
  */
 public class BuilderEnemy implements BuilderCharacter {
 
@@ -31,7 +26,7 @@ public class BuilderEnemy implements BuilderCharacter {
     @Override
     public void reset() {
         this.enemy.character = new Enemy();
-        this.enemy.element=null;
+        this.enemy.element = null;
     }
 
     @Override
@@ -70,19 +65,19 @@ public class BuilderEnemy implements BuilderCharacter {
     @Override
     public void setFront(String name) {
         this.enemy.character.equipment[0] = MagicWorld.armory.search("Front", name);
-        this.enemy.character.defense*=this.enemy.character.equipment[0].multiplier;
+        this.enemy.character.defense *= this.enemy.character.equipment[0].multiplier;
     }
 
     @Override
     public void setHelmet(String name) {
         this.enemy.character.equipment[1] = MagicWorld.armory.search("Helmet", name);
-        this.enemy.character.defense*=this.enemy.character.equipment[1].multiplier;
+        this.enemy.character.defense *= this.enemy.character.equipment[1].multiplier;
     }
 
     @Override
     public void setWeapon(String name) {
         this.enemy.character.equipment[2] = MagicWorld.armory.search("Weapon", name);
-        this.enemy.character.baseDamage*=this.enemy.character.equipment[1].multiplier;
+        this.enemy.character.baseDamage *= this.enemy.character.equipment[1].multiplier;
     }
 
     @Override
