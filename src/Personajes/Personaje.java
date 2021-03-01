@@ -25,7 +25,7 @@ public abstract class Personaje implements Team {
 
     public void setLevel(int lvl) {
         this.level = lvl;
-        this.defense *= lvl;
+        this.defense += (lvl*50);
     }
 
     public int getLevel() {
