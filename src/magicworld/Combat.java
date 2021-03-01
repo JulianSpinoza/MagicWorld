@@ -197,7 +197,7 @@ public class Combat {
     }
 
     private boolean winner(Role jugador, Group enemigos) {
-        if (jugador.character.getHealth() < 0) {
+        if (jugador.character.getHealth() <= 0) {
             return true;
         } else {
             ArrayList<Role> enemy = enemigos.getCharacters();
