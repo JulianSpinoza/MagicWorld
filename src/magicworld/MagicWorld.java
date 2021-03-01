@@ -26,14 +26,13 @@ public class MagicWorld {
     public static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        armory.addFront("helmet1", "example of helmet", 1, 2);
         String texto = voz.LeerTXT("src/txt/Wellcome.txt");
         System.out.println(texto.replace(".", ".\n"));
         //voz.speak(texto);
         texto = voz.LeerTXT("src/txt/Intro.txt");
         System.out.println(texto.replace(".", ".\n"));
         //voz.speak(texto);
-        Role jugador = director.createArcher(1, new BuilderHero(), 1, null, "helmet1", null);
+        Role jugador = director.createArcher(1, new BuilderHero(), 1, "Casco básico", "Pechera éterea", "Arma imperial");
         while (jugador.character.getLevel() <= 12) {
             new Combat(jugador.character.getLevel() - 1, jugador);
         }

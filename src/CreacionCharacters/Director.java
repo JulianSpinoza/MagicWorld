@@ -21,44 +21,46 @@ public class Director {
             builder.setFront(nameFront);
         }
         if (nameHelmet != null) {
-            builder.setFront(nameHelmet);
+            builder.setHelmet(nameHelmet);
         }
         if (nameWeapon != null) {
-            builder.setFront(nameWeapon);
+            builder.setWeapon(nameWeapon);
         }
         builder.setLevel(lvl);
         return builder.getFinal();
 
     }
 
-    public Role crearSwordMan(BuilderCharacter builder, int typeElement, String nameHelmet, String nameFront, String nameWeapon) {
-        builder.setCategoryAndElement(2, typeElement);
-        builder.reset();
+    public Role createSwordMan(int lvl,BuilderCharacter builder, int typeElement, String nameHelmet, String nameFront, String nameWeapon) {
+        builder.setCategoryAndElement(3, typeElement);
+        //builder.reset();
         if (nameFront != null) {
             builder.setFront(nameFront);
         }
         if (nameHelmet != null) {
-            builder.setFront(nameHelmet);
+            builder.setHelmet(nameHelmet);
         }
         if (nameWeapon != null) {
-            builder.setFront(nameWeapon);
+            builder.setWeapon(nameWeapon);
         }
+        builder.setLevel(lvl);
         return builder.getFinal();
 
     }
 
-    public Role crearWizard(BuilderCharacter builder, int typeElement, String nameHelmet, String nameFront, String nameWeapon) {
-        builder.setCategoryAndElement(1, typeElement);
-        builder.reset();
+    public Role createWizard(int lvl,BuilderCharacter builder, int typeElement, String nameHelmet, String nameFront, String nameWeapon) {
+        builder.setCategoryAndElement(2, typeElement);
+        //builder.reset();
         if (nameFront != null) {
             builder.setFront(nameFront);
         }
         if (nameHelmet != null) {
-            builder.setFront(nameHelmet);
+            builder.setHelmet(nameHelmet);
         }
         if (nameWeapon != null) {
-            builder.setFront(nameWeapon);
+            builder.setWeapon(nameWeapon);
         }
+        builder.setLevel(lvl);
         return builder.getFinal();
 
     }
