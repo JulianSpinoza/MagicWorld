@@ -189,7 +189,6 @@ public class Combat {
             System.out.println("Gano!");
         } else {
             jugador.character.restaurarVida();
-            System.out.println(jugador.character.getHealth());
             System.out.println("Perdio!");
         }
         System.out.println("Combate finalizado");
