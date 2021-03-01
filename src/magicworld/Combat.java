@@ -1,13 +1,16 @@
 package magicworld;
 
 import CreacionCharacters.BuilderEnemy;
-import Personajes.*;
 import Personajes.TypeElement.*;
 import Personajes.TypeHero.Role;
 import Team.Group;
 import java.util.ArrayList;
-import java.util.Iterator;
 
+/*
+ * AUTORES: Yuneider Parada Pérez - 20191020058
+ * Julián Camilo Espinosa Morales - 20191020073
+ * Brayan Steven Arellano Espinosa - 20191020151
+ */
 public class Combat {
 
     public Combat(int combat, Role jugador) {

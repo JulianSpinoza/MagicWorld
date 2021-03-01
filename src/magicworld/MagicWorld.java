@@ -11,15 +11,12 @@ import Personajes.Equipment.Armory;
 import Personajes.TypeHero.Role;
 import java.util.Scanner;
 
-/**
- *
- * @author USERS
+/*
+ * AUTORES: Yuneider Parada Pérez - 20191020058
+ * Julián Camilo Espinosa Morales - 20191020073
+ * Brayan Steven Arellano Espinosa - 20191020151
  */
 public class MagicWorld {
-
-    /**
-     * @param args the command line arguments
-     */
     public static Armory armory = Armory.getInstance();
     public static Director director = new Director();
     public static Voice voz = new Voice();

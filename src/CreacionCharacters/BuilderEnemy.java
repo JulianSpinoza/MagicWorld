@@ -1,9 +1,11 @@
 package CreacionCharacters;
 
 import Personajes.Enemy;
+import Personajes.TypeElement.Earth;
 import Personajes.TypeElement.Element;
 import Personajes.TypeElement.Fire;
 import Personajes.TypeElement.Water;
+import Personajes.TypeElement.Wind;
 import Personajes.TypeHero.Archer;
 import Personajes.TypeHero.Role;
 import Personajes.TypeHero.SwordMan;
@@ -38,6 +40,12 @@ public class BuilderEnemy implements BuilderCharacter {
                 break;
             case 2:
                 element = new Water();
+                break;
+            case 3:
+                element = new Earth();
+                break;
+            case 4:
+                element = new Wind();
                 break;
         }
 
